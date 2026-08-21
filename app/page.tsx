@@ -7,14 +7,14 @@ const priorities = [
 export default function Home() {
   return <main>
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Moving Beaumont Forward home"><span className="brand-mark" aria-hidden="true">MBF</span><span>Moving Beaumont Forward</span></a>
-      <a className="header-link" href="#priorities">Our priorities</a>
+      <a className="brand" href="#top" aria-label="Moving Beaumont Forward home"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" /><span>Moving Beaumont Forward</span></a>
+      <nav className="header-nav" aria-label="Primary navigation"><a className="header-link" href="#priorities">Our priorities</a><a className="header-link" href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">Instagram</a></nav>
     </header>
     <section className="hero" id="top">
-      <div className="hero-glow" aria-hidden="true" />
-      <div className="eyebrow"><span /> Our next chapter starts together</div>
-      <h1>Beaumont is ready<br />to move <em>forward.</em></h1>
-      <p className="hero-copy">A community-powered vision for a safer, more connected, and more prosperous Beaumont.</p>
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="eyebrow"><span /> Beaumont, California</div>
+      <h1>Moving Beaumont<br /><em>Forward.</em></h1>
+      <p className="hero-copy">Beaumont information straight from the source—focused on the work, the progress, and the community we call home.</p>
       <div className="hero-actions"><a className="primary-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><span className="coming-soon">More updates coming soon</span></div>
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
     </section>
@@ -23,6 +23,6 @@ export default function Home() {
       <div className="priority-list">{priorities.map((priority) => <article className="priority" key={priority.number}><span className="priority-number">{priority.number}</span><div><h3>{priority.title}</h3><p>{priority.copy}</p></div></article>)}</div>
     </section>
     <section className="closing"><p>One city. One future.</p><h2>Let&apos;s keep Beaumont moving.</h2><a href="#top">Back to top <span aria-hidden="true">↑</span></a></section>
-    <footer><span>© {new Date().getFullYear()} Moving Beaumont Forward</span><span>Built for Beaumont</span></footer>
+    <footer><span>© {new Date().getFullYear()} Moving Beaumont Forward</span><a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">@movingbeaumontforward</a></footer>
   </main>;
 }
