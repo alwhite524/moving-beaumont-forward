@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -21,11 +22,24 @@ OUTPUT_LOGO = MBF_ROOT / "public" / "pd-technology-logo.png"
 
 
 def public_html(source: str) -> str:
+    result, stylesheet_count = re.subn(
+        r'<link href="\.\./\.\./styles\.css\?v=[^"]+" rel="stylesheet">',
+        '<link href="/pd-technology.css" rel="stylesheet">',
+        source,
+        count=1,
+    )
+    result, script_count = re.subn(
+        r'src="dossier\.js\?v=[^"]+"',
+        'src="/pd-technology.js"',
+        result,
+        count=1,
+    )
+    if stylesheet_count != 1 or script_count != 1:
+        raise ValueError("Expected versioned dossier stylesheet and script references were not found")
+
     replacements = {
         '<link href="../../favicon.png" rel="icon">': '<link href="/favicon.svg" rel="icon">',
-        '<link href="../../styles.css?v=20260822-2" rel="stylesheet">': '<link href="/pd-technology.css" rel="stylesheet">',
         'src="../../mbf-logo.png"': 'src="/pd-technology-logo.png"',
-        'src="dossier.js?v=20260822-2"': 'src="/pd-technology.js"',
         'href="viewer.html?doc=': 'href="https://beaumontintelligence.com/dossiers/police/viewer.html?doc=',
         'href="../../briefings/': 'href="https://beaumontintelligence.com/briefings/',
         '<strong>Internal research dossier</strong><span>Source-of-truth working record · Publication review not complete</span>': '<strong>Public accountability dossier</strong><span>Source-linked record · Updated as evidence becomes available</span>',
@@ -35,7 +49,6 @@ def public_html(source: str) -> str:
         '<h2>What must be completed before public release</h2>': '<h2>What remains to complete the public record</h2>',
         '<li><span>Final gate</span>Claim-by-claim verification and editorial approval.</li>': '<li><span>Ongoing review</span>Claim-by-claim verification and editorial review as new records become available.</li>',
     }
-    result = source
     for old, new in replacements.items():
         if old not in result:
             raise ValueError(f"Expected source fragment was not found: {old}")
