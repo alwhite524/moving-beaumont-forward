@@ -1,6 +1,6 @@
 /*
 --------------------------------------------------
-Beaumont Intelligence
+Moving Beaumont Forward
 Official Source Library
 Document Metadata
 Version 1.3.0
