@@ -34,6 +34,12 @@ const technologies = [
     summary:
       "The verified record traces Beaumont’s Flock system to at least 2020. Council later authorized citywide right-of-way placement and, in 2024, a two-year subscription for 36 additional cameras.",
     fact: "$225,900 authorized over two years",
+    sections: [
+      { title: "Key points", body: "Staff reported 11 operating cameras before Council authorized 36 additions. That implies 47 cameras, but the reviewed record does not confirm that every unit was installed or remains active. Staff described searches and alerts involving suspect vehicles, burglaries, and stolen vehicles." },
+      { title: "Data, policy and oversight", body: "The live Flock portal reports 30-day retention, while Beaumont Police Policy 465 says ALPR data downloaded to the server should be retained for at least one year. Published access-log audits, sharing registers, error-rate reports, complaint findings, and a complete current inventory have not been added." },
+      { title: "Fiscal record", body: "The verified 2024 ceiling is $225,900 for a two-year subscription covering 36 additions. Earlier costs, invoices, actual payments, installation count, and any successor agreement remain unverified." },
+      { title: "What to watch", body: "The record still needs current locations and operational status, authorized users and outside recipients, retention reconciliation, false-alert data, useful leads, recoveries, arrests, complaints, misuse findings, and cost per useful outcome." },
+    ],
   },
   {
     label: "Recorded evidence",
@@ -41,6 +47,12 @@ const technologies = [
     summary:
       "In 2025, Council approved a five-year agreement covering body cameras, digital evidence management, transcription, translation, redaction assistance, and equipment services.",
     fact: "Five-year agreement approved",
+    sections: [
+      { title: "Included capabilities", body: "The agreement combines body-worn cameras, scheduled equipment services, Evidence.com digital evidence management, automated transcription and translation, redaction assistance, and personnel-documentation tools. Officers remain responsible for reviewing generated reports." },
+      { title: "Fiscal record", body: "The meeting record establishes a five-year term, but the executed price schedule, total authorized ceiling, invoices, and actual expenditures still need to be reconciled." },
+      { title: "Policy and accountability", body: "The public record still needs activation and release rules, retention schedules, access controls, audit reports, complaint findings, redaction-performance measures, and evidence showing operational value." },
+      { title: "Records still needed", body: "Executed agreement and exhibits, deployed inventory, training records, activation compliance, access audits, complaint outcomes, equipment-loss records, and measures of evidentiary value." },
+    ],
   },
   {
     label: "Aerial response",
@@ -48,6 +60,12 @@ const technologies = [
     summary:
       "Council approved a separate Flock aerial-response program in 2026. The authorization does not establish when or how fully the system was deployed, or what results it has produced.",
     fact: "$900,000 authorized over three years",
+    sections: [
+      { title: "What authorization establishes", body: "Council approved a three-year program and a $900,000 ceiling. The action concerns aerial first-response capability, not an expansion of the fixed-camera network. Approval alone does not prove launch date, coverage, aircraft count, flight volume, or results." },
+      { title: "Operations and privacy", body: "Open questions include qualifying call types, pilot and supervisor roles, launch sites, live-feed access, FAA authority, airspace and weather limits, incident procedures, and retention of video, telemetry, flight logs, and dispatch data." },
+      { title: "Fiscal and performance record", body: "The authorization is not proof that the full amount was spent. Contracts, invoices, staffing, infrastructure, maintenance, insurance, response-time measures, canceled launches, de-escalations, complaints, crashes, and cost per useful response remain to be reconciled." },
+      { title: "Records still needed", body: "Executed terms, aircraft and dock inventory, deployment schedule, FAA approvals, operating policy, flight logs, call categories, access rules, incident reports, staffing effects, invoices, and verified outcomes." },
+    ],
   },
   {
     label: "Investigative analytics",
@@ -55,6 +73,12 @@ const technologies = [
     summary:
       "Council approved software described as bringing searches across approximately twelve law-enforcement data sources into one platform and supporting crime analytics and future drone workflows.",
     fact: "Approved after public discussion",
+    sections: [
+      { title: "Represented capabilities", body: "Police described searches across approximately twelve departmental or law-enforcement data sources, faster investigative queries, automated crime analytics, and possible support for future drone workflows. Efficiency and staffing claims have not been independently measured." },
+      { title: "Data governance", body: "The public record still needs the connected database and field inventory, user roles, query justifications, approvals, audit logs, prohibited uses, vendor and outside-agency access, and correction procedures for inaccurate or stale records." },
+      { title: "Fiscal and outcome record", body: "The executed term, implementation and integration charges, training, recurring price, invoices, payments, and renewal terms are not yet established. Authorization does not prove time saved, crimes cleared, errors prevented, or positions avoided." },
+      { title: "Records still needed", body: "Executed agreement and price schedule, data map, permissions, query logs, retention and sharing rules, accuracy controls, complaints, investigations, invoices, training records, and measurable outcomes." },
+    ],
   },
 ];
 
@@ -81,7 +105,7 @@ export default function PdTechUpdate() {
       <article>
         <section className="article-hero">
           <div className="article-kicker">PD Tech Dossier · Public briefing</div>
-          <h1>What Beaumont has authorized—and what remains unanswered.</h1>
+          <h1>What Beaumont has authorized — and what remains unanswered.</h1>
           <p className="article-deck">Beaumont Police uses an expanding set of tools for vehicle identification, recorded evidence, aerial response, and investigative analysis. Here is what the public record establishes so far.</p>
           <div className="article-meta"><time dateTime="2026-08-22">August 22, 2026</time><span>Evidence reviewed through August 2026</span></div>
         </section>
@@ -93,7 +117,7 @@ export default function PdTechUpdate() {
 
         <section className="article-section article-systems">
           <div className="article-section-heading"><p className="article-eyebrow">The technology record</p><h2>What Council approved</h2></div>
-          <div className="system-grid">{technologies.map((technology, index) => <article className="system-card" key={technology.title}><span className="system-number">0{index + 1}</span><p className="system-label">{technology.label}</p><h3>{technology.title}</h3><p>{technology.summary}</p><strong>{technology.fact}</strong></article>)}</div>
+          <div className="technology-record-stack">{technologies.map((technology, index) => <details className="technology-record-card" key={technology.title} open={index === 0}><summary><span className="technology-record-number">0{index + 1}</span><span><small>{technology.label}</small><strong>{technology.title}</strong></span><i aria-hidden="true" /></summary><div className="technology-record-body"><p className="technology-record-summary">{technology.summary}</p><p className="technology-record-fact">{technology.fact}</p><div className="technology-record-details">{technology.sections.map((section) => <details key={section.title}><summary>{section.title}</summary><p>{section.body}</p></details>)}</div></div></details>)}</div>
         </section>
 
         <section className="article-section article-timeline-section">
