@@ -42,8 +42,7 @@ def public_html(source: str) -> str:
         'src="../../mbf-logo.png"': 'src="/pd-technology-logo.png"',
         '<div class="brand" aria-label="Moving Beaumont Forward">': '<a class="brand" href="/" aria-label="Return to Moving Beaumont Forward home">',
         '</span></div>\n</div></header>': '</span></a>\n</div></header>',
-        'href="viewer.html?doc=': 'href="https://beaumontintelligence.com/dossiers/police/viewer.html?doc=',
-        'href="../../briefings/': 'href="https://beaumontintelligence.com/briefings/',
+        'href="../../briefings/': 'href="/briefings/',
         '<strong>Internal research dossier</strong><span>Source-of-truth working record · Publication review not complete</span>': '<strong>Public accountability dossier</strong><span>Source-linked record · Updated as evidence becomes available</span>',
         '<span class="status-pill">Research active</span>': '<span class="status-pill">Public record active</span>',
         '<dt>Publication status</dt><dd>Not approved</dd>': '<dt>Publication status</dt><dd>Published</dd>',
@@ -55,6 +54,33 @@ def public_html(source: str) -> str:
         if old not in result:
             raise ValueError(f"Expected source fragment was not found: {old}")
         result = result.replace(old, new)
+
+    video_links = {
+        "flock": "https://www.youtube.com/watch?v=pJere8tXO7M&t=14901s",
+        "axon": "https://www.youtube.com/watch?v=cfqIZpAQfg4&t=11176s",
+        "drone": "https://www.youtube.com/watch?v=f0e7yqc3XYs&t=10461s",
+        "peregrine": "https://www.youtube.com/watch?v=WnQ5OtILrzU&t=4434s",
+    }
+    for segment, url in video_links.items():
+        result = result.replace(
+            f'href="video-viewer.html?segment={segment}"',
+            f'href="{url}" target="_blank" rel="noopener"',
+        )
+
+    # BI's private document viewer is not published on MBF. Keep its useful
+    # link labels as plain text instead of exposing BI-only URLs or dead links.
+    result = re.sub(
+        r'<a\b[^>]*href="(?:https://beaumontintelligence\.com/dossiers/police/)?viewer\.html\?doc=[^"]+"[^>]*>(.*?)</a>',
+        r'\1',
+        result,
+        flags=re.DOTALL,
+    )
+    result = re.sub(
+        r'<a\b[^>]*href="https://beaumontintelligence\.com[^"]*"[^>]*>(.*?)</a>',
+        r'\1',
+        result,
+        flags=re.DOTALL,
+    )
     canonical = '  <link rel="canonical" href="https://movingbeaumontforward.com/pd-technology.html">\n'
     result = result.replace('  <meta name="theme-color" content="#0b3567">\n', '  <meta name="theme-color" content="#0b3567">\n' + canonical)
     return result
