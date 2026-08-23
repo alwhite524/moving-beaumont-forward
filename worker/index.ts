@@ -29,6 +29,18 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    const councilIntelligencePage =
+      url.pathname === "/council-intelligence.html" ||
+      url.pathname === "/council-briefings.html" ||
+      url.pathname === "/council-briefings-2026.html" ||
+      url.pathname === "/documents/index.html" ||
+      url.pathname === "/documents/viewer.html" ||
+      /^\/briefings\/\d{4}-\d{2}-\d{2}\.html$/.test(url.pathname);
+
+    if (councilIntelligencePage) {
+      return env.ASSETS.fetch(request);
+    }
+
     if (url.pathname === "/pd-technology.html") {
       return env.ASSETS.fetch(
         new Request(new URL("/pd-technology-dossier.html", request.url), request),

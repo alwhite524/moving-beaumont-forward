@@ -22,14 +22,14 @@ export default async function Home() {
   return <main>
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Moving Beaumont Forward home"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" /><span>Moving Beaumont Forward</span></a>
-      <nav className="header-nav" aria-label="Primary navigation"><a className="nav-button" href="#priorities">Our Priorities</a><a className="nav-button nav-button-accent" href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">Instagram ↗</a></nav>
+      <nav className="header-nav" aria-label="Primary navigation"><a className="nav-button" href="#priorities">Our Priorities</a><a className="nav-button" href="/council-intelligence.html">Council Briefings</a><a className="nav-button nav-button-accent" href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">Instagram ↗</a></nav>
     </header>
     <section className="hero" id="top">
       <div className="hero-shade" aria-hidden="true" />
       <div className="eyebrow"><span /> Beaumont, California</div>
       <h1>Moving Beaumont<br /><em>Forward.</em></h1>
       <p className="hero-copy">Beaumont information straight from the source—focused on the work, the progress, and the community we call home.</p>
-      <div className="hero-actions"><a className="primary-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button" href="/pd-technology.html">Read the PD technology dossier <span aria-hidden="true">→</span></a></div>
+      <div className="hero-actions"><a className="primary-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button" href="/pd-technology.html">PD technology dossier <span aria-hidden="true">→</span></a><a className="secondary-button" href="/council-intelligence.html">Council Intelligence briefings <span aria-hidden="true">→</span></a></div>
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
     </section>
     <section className="priorities" id="priorities">

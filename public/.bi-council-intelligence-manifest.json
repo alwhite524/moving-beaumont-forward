@@ -1,0 +1,306 @@
+{
+  "canonical_source": "beaumont-intelligence",
+  "destination": "moving-beaumont-forward/public",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 16985,
+      "sha256": "8678f4f7d08cf3b97ce5dc031fbab30ae60e8f6ed56c51f2a157c07efd825d6d"
+    },
+    {
+      "path": "briefings/2026-07-21.html",
+      "bytes": 32379,
+      "sha256": "d1f500c6c491e38f846511bc346f42a5f007d44a71b08667b24eecaf93ac38cb"
+    },
+    {
+      "path": "briefings/2026-08-04.html",
+      "bytes": 23192,
+      "sha256": "4497c53d5de774cf01a46599996ad6077674ce8b708ae1bb994aa9d67a2c359b"
+    },
+    {
+      "path": "briefings/2026-08-18.html",
+      "bytes": 22422,
+      "sha256": "1f52f1ce4f930cb5c99b5983d8525ef41a7df0f2eedbde08de4f540b46b641fc"
+    },
+    {
+      "path": "council-briefings-2026.html",
+      "bytes": 8752,
+      "sha256": "3716e4837bdee6bb6381daaa94ec662f7adb300a6d91c72df344d87734c550e8"
+    },
+    {
+      "path": "council-briefings.html",
+      "bytes": 11365,
+      "sha256": "03e40cc19ec74a6a809ee13339310b6ba47bc3d9558ffc01d4bb03bf564cbe2e"
+    },
+    {
+      "path": "council-intelligence.html",
+      "bytes": 8388,
+      "sha256": "4d13f1ace3a1b7bb3485552c2ea58adae3a7c14e4459e4af36390ada247a8666"
+    },
+    {
+      "path": "data.js",
+      "bytes": 33846,
+      "sha256": "1da6aecd2ae15891741bbda6ad4fc14ea04d8c3eddfb21b0577095799c9c2afa"
+    },
+    {
+      "path": "documents/document-data.js",
+      "bytes": 32703,
+      "sha256": "437371406787789acc2a97e82095d1cd84c124a173da64f084076198bdc92ad6"
+    },
+    {
+      "path": "documents/index.html",
+      "bytes": 19756,
+      "sha256": "b1cb6f8c2da3b63dbf315a715d3eb35fbb817efc2c672115ffe74f53f7423b42"
+    },
+    {
+      "path": "documents/viewer.html",
+      "bytes": 2356,
+      "sha256": "42317929e663f4d62a1d2ffdcbd2e1b5992686b304b98d38d97bfe8d63520d7d"
+    },
+    {
+      "path": "documents/viewer.js",
+      "bytes": 9746,
+      "sha256": "82eeb5295452a3e523d90dfe4379bcb433325f14118fec26924f76da5f9d1022"
+    },
+    {
+      "path": "favicon.png",
+      "bytes": 7222,
+      "sha256": "4027d4ecded3d6cd991780ed70d6771d0bcc8bd4ae52a17c5d7b5da2d1653bc9"
+    },
+    {
+      "path": "mbf-logo.png",
+      "bytes": 482913,
+      "sha256": "17c869adb601a8d05d1418202d89ccdfb25756336f1718283c6e4416b1ed8762"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-01.jpg",
+      "bytes": 38707,
+      "sha256": "db8b2c00dc5f8fea37ac59e2c6c075341c51f96639feec2a5db4ff31b81bc0bf"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-02.jpg",
+      "bytes": 113556,
+      "sha256": "0dba474c640255d270930d35d075d0afc93203b3d7693805f538c7732f4497eb"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-03.jpg",
+      "bytes": 181551,
+      "sha256": "3e1c3c976bb58149eebaec623d709bbf8122b6b33d1e82fe0abe2f972b0f4d17"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-04.jpg",
+      "bytes": 142117,
+      "sha256": "3193953a32bfdc8d7664d4741215dee2d59448a18df194fdd35a6b4dd56961f2"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-05.jpg",
+      "bytes": 159449,
+      "sha256": "1def4e18473823bc86793cd6bcf1e9db406b9b0a8bc8ff66bab0303261ebaec8"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-06.jpg",
+      "bytes": 156728,
+      "sha256": "b73b69b3668f9cd31e82e45e94a85998692410e46a6fd1322ba74a07a085aed9"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-07.jpg",
+      "bytes": 146055,
+      "sha256": "a2e08a286a2bd5d655086333e06210cb44b580b052e7f153302971b84ceff1e3"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-08.jpg",
+      "bytes": 147700,
+      "sha256": "f21259a3e1316c8b7ca1a1edbe68fb9d9846f5de01f18a518c5c2b7dbc382393"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-09.jpg",
+      "bytes": 131612,
+      "sha256": "b4aaf48615ad9e44a22491c6f9a0a95720ad668129afea1376a0ceb84276e686"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-10.jpg",
+      "bytes": 192964,
+      "sha256": "0ee937095a2e3402881c1c94f5dabf3f0c96a0e5d30aeb464848c5f257c82745"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-11.jpg",
+      "bytes": 140932,
+      "sha256": "e54a8d5b56e2ebc7d3589c9834c1f4d1c954555cf05fcca763d42fb590ff00b0"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-12.jpg",
+      "bytes": 165472,
+      "sha256": "b388ef79398ac61653d0aea24315fcbb73bc6b433df4772174e7a3fb0e59a3fc"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-13.jpg",
+      "bytes": 182557,
+      "sha256": "8ae611603c081fae1dac47af14e643edb2a86b50f4a0b996ef415093459535a3"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-14.jpg",
+      "bytes": 50612,
+      "sha256": "e959816735f212cff1d4b79329414b5e9516db666b2e83f2608c6024eaa10be4"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-15.jpg",
+      "bytes": 126226,
+      "sha256": "9ed57a333d3c640fb5249e8208b809613cb8fbe0d230672aeb2c7864691ce6ac"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-16.jpg",
+      "bytes": 189791,
+      "sha256": "31e542cda68893f8f16fc4b22dac10d911813b63f38e8140beb9c641cf3bb1c4"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-17.jpg",
+      "bytes": 229103,
+      "sha256": "79422f0aaf6b459377818af33b2bdfc109f1d76e41447753d0445ffba6eb9856"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-agreement/page-18.jpg",
+      "bytes": 99782,
+      "sha256": "d268e782286c8661e535a1dc6c6c4b1e7c12d2b0288afce715448ee3c1272e70"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-applicant/page-1.jpg",
+      "bytes": 153648,
+      "sha256": "32eaebbf13efea72957fc27c2ffac86fef1ddadb99437b7de33279e754e7908b"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-applicant/page-2.jpg",
+      "bytes": 149896,
+      "sha256": "37b19382d42baa2f85bc16f5a73dec85350bc5d78fa8bf91e01b53bb1b835033"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-applicant/page-3.jpg",
+      "bytes": 19699,
+      "sha256": "616555a32505edf66d6477dc15811cfeb6ff626a685f00299d0c7260b011c9f3"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-01.jpg",
+      "bytes": 99074,
+      "sha256": "bc9c08ca95b67047b1666b3b482eaa661a034c6648ac1b06d3b000b2249d8a74"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-02.jpg",
+      "bytes": 161553,
+      "sha256": "085b2fa2404b3176dfafa2b83c7d69e209db60157a31663dba312c2b31e17382"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-03.jpg",
+      "bytes": 172148,
+      "sha256": "aa6ec6c38b256027541403099054283db4502ec73291c78dae10d561ec4f30ed"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-04.jpg",
+      "bytes": 197490,
+      "sha256": "052e78ebb957f6fc594f5d659ac63c28741cd0cc8f3268251e41261ce2ada7fa"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-05.jpg",
+      "bytes": 160722,
+      "sha256": "95a5b6c1517d6fcc95ba00f981eaea617e67d3c43bf0d377dc7bac555d62739d"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-06.jpg",
+      "bytes": 177889,
+      "sha256": "5c3b175831c94ed2f46a326184e6c4ce301ca140f17232dbafd717c5930b30e6"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-07.jpg",
+      "bytes": 75484,
+      "sha256": "529e5dfeb3e18e63de7510d35b3fc5af57a387c7b9c125fefbda448e90df0d91"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-08.jpg",
+      "bytes": 19722,
+      "sha256": "2dcc564a6014bf8969a61c444c9c813cb44f3d317be0e7d346f226c5a2965fb0"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-09.jpg",
+      "bytes": 2035964,
+      "sha256": "a6c8f4c5ffce1e667fd0164648bebe3319611883f4b7383e9eb1b157e00f23b1"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-10.jpg",
+      "bytes": 1980902,
+      "sha256": "8911fbb27efb82aff91fcb9f5024da45d457d4095c225810c6364354e11dd7af"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-11.jpg",
+      "bytes": 1931015,
+      "sha256": "a061c253df34847c0afb3fd2dc87947622801ecec0c4ace0da9fbfe3ee4c5d14"
+    },
+    {
+      "path": "official-documents/2026-08-04/rendered/j1-scoring/page-12.jpg",
+      "bytes": 2080694,
+      "sha256": "e9512414fdc9c7ec8f062d50e93f75e5e693ccdcc47da4f4bc9dff20d8ba41cd"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-1.png",
+      "bytes": 158907,
+      "sha256": "b0e181a15cce319eab59213fa5f101509eaf812c8167632ca6389355d45f5765"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-2.png",
+      "bytes": 156649,
+      "sha256": "4b40701068c30b745ddbaf7c4259753d7c5c8c7ba368876b58c9e6e3af4180e9"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-3.png",
+      "bytes": 199661,
+      "sha256": "3c3ada9d4272e90292a83bbcf5cfa21fb164f71673f16ae6a046b2ac1f76f730"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-4.png",
+      "bytes": 21595,
+      "sha256": "00c3ae4bc7631570320ff8138a3cbd82ccfd579c1f7aa092a2e3b589b6600b49"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-5.png",
+      "bytes": 312126,
+      "sha256": "36821fff504b1f1318d8f643d5a64ae37a3697789558c0d5e8874fb03bad660b"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-6.png",
+      "bytes": 19854,
+      "sha256": "22cff5e804d0bfae4f6936615fa3d696b6720c096c1c4f01aea70cd2853af3dc"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-compliance/page-7.png",
+      "bytes": 441084,
+      "sha256": "8753fb7f69d6974b604cc212f204b5831ee44dd94f8579223095dbbcf20fe012"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-grant-deed/page-1.png",
+      "bytes": 236840,
+      "sha256": "38ba0cf68d9d57c3e9c1f7aa7f5ecbe6c084e28fc2850f47b1d78102722a4eb1"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-grant-deed/page-2.png",
+      "bytes": 372659,
+      "sha256": "a6abcf5d17622f333863e59438d735c6100cda1f7f4862d5848b2aec25eead69"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-grant-deed/page-3.png",
+      "bytes": 312117,
+      "sha256": "2d63e41a0ab6d5add92132726077796c491d4671a1b3559c99cbed861cd74750"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-grant-deed/page-4.png",
+      "bytes": 441070,
+      "sha256": "8842584d57e40f8df6c79e00a88bf0302aa84523c9e97faf58daac9f9f004f38"
+    },
+    {
+      "path": "official-documents/2026-08-18/rendered/g6-grant-deed/page-5.png",
+      "bytes": 119070,
+      "sha256": "fa83a86b3eecf601772f1594f5d3b906e98d4b154cc24ce86fd5ff0389b2bb5b"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 63209,
+      "sha256": "50ab58721221038397906b3efd94ef14f7d95eb27ca7df04c6eebbaecd743442"
+    }
+  ]
+}

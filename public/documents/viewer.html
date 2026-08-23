@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>Official Document Viewer | Beaumont Intelligence</title>
+
+<link rel="stylesheet" href="../styles.css?v=20260815j">
+
+</head>
+
+<body data-page="document-viewer">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="app-header"><div class="wrap header-row">
+  <a aria-label="Beaumont Intelligence home" class="brand" href="/"><img alt="Moving Beaumont Forward logo" class="brand-logo" src="../mbf-logo.png"><span class="brand-copy"><strong><span class="red">BEAUMONT</span> <span class="blue">INTELLIGENCE</span></strong><small>Official Source Library</small></span></a>
+  <nav aria-label="Primary navigation" class="primary-nav"><a href="/">Home</a><a href="../council-intelligence.html">Council Intelligence</a><a href="index.html">Research Library</a></nav>
+</div></header>
+
+<main class="wrap document-viewer-page" id="main">
+
+<div class="eyebrow">
+Official Source Library
+</div>
+
+<h1 id="document-title">
+Loading...
+</h1>
+
+<p id="document-summary">
+Loading document summary...
+</p>
+
+<div class="document-viewer-actions">
+  <a class="text-link" id="briefing-link" href="#">← Return to Council briefing</a>
+</div>
+
+<section class="inline-pdf-panel" aria-labelledby="pdf-heading" hidden>
+  <div class="inline-pdf-heading">
+    <div><h2 id="pdf-heading">Document</h2><span>Use the attachment cards below to switch documents.</span></div>
+    <button class="inline-pdf-close" id="pdf-close" type="button" aria-label="Close document viewer"><span>Close</span><strong aria-hidden="true">×</strong></button>
+  </div>
+  <div id="pdf-viewer" class="pdf-page-stack" role="document" aria-label="Official document PDF"></div>
+</section>
+
+<h2>Meeting Information</h2>
+
+<table class="info-table">
+
+<tr>
+<th>Meeting</th>
+<td id="meeting-date"></td>
+</tr>
+
+<tr>
+<th>Agenda Item</th>
+<td id="agenda-item"></td>
+</tr>
+
+<tr>
+<th>Category</th>
+<td id="category"></td>
+</tr>
+
+<tr>
+<th>Document Type</th>
+<td id="document-type"></td>
+</tr>
+
+</table>
+
+<h2>Documents</h2>
+
+<div id="attachments">
+
+No documents available.
+
+</div>
+
+</main>
+
+<script src="document-data.js?v=20260815d"></script>
+<script src="viewer.js?v=20260815i"></script>
+
+</body>
+
+</html>
