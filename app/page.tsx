@@ -29,7 +29,7 @@ export default async function Home() {
       <div className="eyebrow"><span /> Beaumont, California</div>
       <h1>Moving Beaumont<br /><em>Forward.</em></h1>
       <p className="hero-copy">Beaumont information straight from the source—focused on the work, the progress, and the community we call home.</p>
-      <div className="hero-actions"><a className="primary-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><span className="coming-soon">More updates coming soon</span></div>
+      <div className="hero-actions"><a className="primary-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="hero-briefing-link" href="/pd-technology.html">Read the PD technology briefing <span aria-hidden="true">→</span></a></div>
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
     </section>
     <section className="priorities" id="priorities">

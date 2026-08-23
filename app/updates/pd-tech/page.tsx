@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 const title = "Beaumont PD Technology: What We Know";
 const description =
@@ -7,10 +9,13 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  alternates: {
+    canonical: "/pd-technology.html",
+  },
   openGraph: {
     title,
     description,
-    url: "/updates/pd-tech",
+    url: "/pd-technology.html",
     type: "article",
     images: [],
   },
@@ -66,11 +71,11 @@ export default function PdTechUpdate() {
   return (
     <main className="article-page">
       <header className="article-header">
-        <a className="brand" href="/" aria-label="Moving Beaumont Forward home">
-          <img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" />
+        <Link className="brand" href="/" aria-label="Moving Beaumont Forward home">
+          <Image className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" width={48} height={48} />
           <span>Moving Beaumont Forward</span>
-        </a>
-        <a className="article-home-link" href="/">All updates</a>
+        </Link>
+        <Link className="article-home-link" href="/">All updates</Link>
       </header>
 
       <article>
@@ -111,18 +116,18 @@ export default function PdTechUpdate() {
         <section className="article-section source-section">
           <div className="article-section-heading"><p className="article-eyebrow">Check the record</p><h2>Primary sources</h2></div>
           <div className="source-links">
-            <a href="https://www.beaumontca.gov/1227/Automated-License-Plate-Readers-ALPRs" target="_blank" rel="noopener"><strong>Beaumont Police ALPR policy</strong><span>Official City page ↗</span></a>
-            <a href="https://transparency.flocksafety.com/beaumont-ca-pd" target="_blank" rel="noopener"><strong>Flock transparency portal</strong><span>Live disclosure ↗</span></a>
-            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Id=26dcded1-a4f8-46d3-9ffa-022659d50e42&amp;lang=English" target="_blank" rel="noopener"><strong>August 20, 2024 Council record</strong><span>ALPR expansion documents ↗</span></a>
-            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Agenda=Agenda&amp;Id=472e8efe-ba67-42c4-9b00-ad9f4112d527&amp;lang=English" target="_blank" rel="noopener"><strong>December 2, 2025 Council record</strong><span>Axon agreement documents ↗</span></a>
-            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Agenda=Agenda&amp;Id=6804201f-7088-4b6c-a0da-c5f4c02b3bcc&amp;lang=English" target="_blank" rel="noopener"><strong>April 7, 2026 Council record</strong><span>Drone program documents ↗</span></a>
-            <a href="https://www.youtube.com/watch?v=WnQ5OtILrzU&amp;t=4425s" target="_blank" rel="noopener"><strong>August 4, 2026 Council discussion</strong><span>Peregrine video · 1:13:45 ↗</span></a>
+            <a href="https://www.beaumontca.gov/1227/Automated-License-Plate-Readers-ALPRs" target="_blank" rel="noreferrer"><strong>Beaumont Police ALPR policy</strong><span>Official City page ↗</span></a>
+            <a href="https://transparency.flocksafety.com/beaumont-ca-pd" target="_blank" rel="noreferrer"><strong>Flock transparency portal</strong><span>Live disclosure ↗</span></a>
+            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Id=26dcded1-a4f8-46d3-9ffa-022659d50e42&amp;lang=English" target="_blank" rel="noreferrer"><strong>August 20, 2024 Council record</strong><span>ALPR expansion documents ↗</span></a>
+            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Agenda=Agenda&amp;Id=472e8efe-ba67-42c4-9b00-ad9f4112d527&amp;lang=English" target="_blank" rel="noreferrer"><strong>December 2, 2025 Council record</strong><span>Axon agreement documents ↗</span></a>
+            <a href="https://pub-beaumont.escribemeetings.com/Meeting.aspx?Agenda=Agenda&amp;Id=6804201f-7088-4b6c-a0da-c5f4c02b3bcc&amp;lang=English" target="_blank" rel="noreferrer"><strong>April 7, 2026 Council record</strong><span>Drone program documents ↗</span></a>
+            <a href="https://www.youtube.com/watch?v=WnQ5OtILrzU&amp;t=4425s" target="_blank" rel="noreferrer"><strong>August 4, 2026 Council discussion</strong><span>Peregrine video · 1:13:45 ↗</span></a>
           </div>
           <p className="editorial-note"><strong>Editorial note:</strong> This briefing reports verified public actions and clearly identified evidence gaps. It will be updated as contracts, inventories, policies, audits, invoices, and operational outcomes become available.</p>
         </section>
       </article>
 
-      <footer className="article-footer"><span>© {new Date().getFullYear()} Moving Beaumont Forward</span><a href="/">Back to Moving Beaumont Forward</a></footer>
+      <footer className="article-footer"><span>© {new Date().getFullYear()} Moving Beaumont Forward</span><Link href="/">Back to Moving Beaumont Forward</Link></footer>
     </main>
   );
 }

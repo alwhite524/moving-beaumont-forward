@@ -1,6 +1,6 @@
 # PD Tech Dossier publishing handoff
 
-Public MBF route: `/updates/pd-tech`
+Public MBF route: `/pd-technology.html`
 
 Use the following item when the MBF route is live. Replace `publishedAt` with
 the actual publication timestamp before adding it to BI's
@@ -11,7 +11,7 @@ the actual publication timestamp before adding it to BI's
   "id": "pd-tech-2026-08",
   "title": "Beaumont PD Technology: What We Know",
   "excerpt": "A source-linked public briefing on Beaumont Police technology, including license plate readers, body-worn cameras, drones, and investigative analytics.",
-  "url": "https://movingbeaumontforward.com/updates/pd-tech",
+  "url": "https://movingbeaumontforward.com/pd-technology.html",
   "publishedAt": "REPLACE_WITH_PUBLICATION_TIMESTAMP"
 }
 ```

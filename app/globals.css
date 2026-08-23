@@ -18,6 +18,7 @@ h1 { position: relative; max-width: 1050px; margin: 0; font-size: clamp(58px, 9v
 h1 em { color: white; font-family: Georgia, serif; font-weight: 400; text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: .07em; text-underline-offset: .08em; }
 .hero-copy { position: relative; max-width: 590px; margin: 34px 0 30px; font-size: clamp(18px, 2vw, 24px); line-height: 1.5; color: #d9e9f8; letter-spacing: -.02em; }
 .hero-actions { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+.hero-briefing-link { color: white; font-size: 14px; font-weight: 700; text-underline-offset: 6px; }
 .primary-button { display: inline-flex; gap: 22px; align-items: center; padding: 16px 20px; border-radius: 4px; background: var(--red); color: white; text-decoration: none; font-weight: 700; }
 .coming-soon { color: #a9c5dd; font-size: 14px; }
 .route-line { position: absolute; right: 7vw; bottom: 10vh; display: flex; align-items: center; width: min(30vw, 430px); }
