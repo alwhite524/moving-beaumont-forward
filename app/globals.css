@@ -8,7 +8,7 @@ a { color: inherit; }
 .site-header { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 26px 6vw; }
 .brand { display: flex; gap: 13px; align-items: center; text-decoration: none; font-weight: 650; letter-spacing: -.02em; }
 .brand-logo { width: 58px; height: 58px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 24px #00000026; }
-.header-nav { display: flex; align-items: center; gap: 26px; }
+.header-nav { display: flex; align-items: center; gap: 10px; }
 .nav-button { display: inline-flex; align-items: center; min-height: 42px; padding: 11px 16px; border: 1px solid #ffffff80; border-radius: 4px; background: #071e3e99; color: white; font-size: 14px; font-weight: 750; text-decoration: none; box-shadow: 0 8px 24px #0000001f; }
 .nav-button:hover, .nav-button:focus-visible { border-color: white; background: white; color: var(--navy); }
 .nav-button-accent { border-color: var(--red); background: var(--red); }
