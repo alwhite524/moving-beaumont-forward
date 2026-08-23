@@ -40,6 +40,8 @@ def public_html(source: str) -> str:
     replacements = {
         '<link href="../../favicon.png" rel="icon">': '<link href="/favicon.svg" rel="icon">',
         'src="../../mbf-logo.png"': 'src="/pd-technology-logo.png"',
+        '<div class="brand" aria-label="Moving Beaumont Forward">': '<a class="brand" href="/" aria-label="Return to Moving Beaumont Forward home">',
+        '</span></div>\n</div></header>': '</span></a>\n</div></header>',
         'href="viewer.html?doc=': 'href="https://beaumontintelligence.com/dossiers/police/viewer.html?doc=',
         'href="../../briefings/': 'href="https://beaumontintelligence.com/briefings/',
         '<strong>Internal research dossier</strong><span>Source-of-truth working record · Publication review not complete</span>': '<strong>Public accountability dossier</strong><span>Source-linked record · Updated as evidence becomes available</span>',
