@@ -42,6 +42,10 @@ def localized(data: bytes) -> bytes:
             b'parsedUrl.protocol !== "https:" ||\n        parsedUrl.hostname !== "documents.beaumontintelligence.com"',
             b'parsedUrl.origin !== window.location.origin ||\n        !parsedUrl.pathname.startsWith("/council-documents/")',
         ),
+        (
+            b"if (requestedUrl) renderStandalone(requestedUrl);\n  else renderDocument(params.get(\"id\") || requestedRecord?.id);",
+            b"if (requestedUrl) renderStandalone(requestedUrl);\n  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);\n  else renderDocument(params.get(\"id\") || requestedRecord?.id);",
+        ),
     )
     for old, new in replacements:
         data = data.replace(old, new)

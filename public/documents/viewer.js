@@ -274,5 +274,6 @@
     : null;
 
   if (requestedUrl) renderStandalone(requestedUrl);
+  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);
   else renderDocument(params.get("id") || requestedRecord?.id);
 })();
