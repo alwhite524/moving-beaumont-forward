@@ -123,7 +123,7 @@
       window.history.pushState({ documentId: record.id }, "", nextUrl);
     }
 
-    document.title = `${record.title} | Beaumont Intelligence`;
+    document.title = `${record.title} | Moving Beaumont Forward`;
     title.textContent = record.title;
     summary.textContent = record.summary;
 
@@ -199,10 +199,10 @@
   const renderStandalone = (url) => {
     let filename = "Official document";
     try {
-      const parsedUrl = new URL(url);
+      const parsedUrl = new URL(url, window.location.origin);
       if (
-        parsedUrl.protocol !== "https:" ||
-        parsedUrl.hostname !== "documents.beaumontintelligence.com"
+        parsedUrl.origin !== window.location.origin ||
+        !parsedUrl.pathname.startsWith("/council-documents/")
       ) {
         throw new Error("Unsupported document host");
       }
@@ -214,9 +214,9 @@
       return;
     }
 
-    document.title = `${filename} | Beaumont Intelligence`;
+    document.title = `${filename} | Moving Beaumont Forward`;
     title.textContent = filename;
-    summary.textContent = "Archived official document hosted by Beaumont Intelligence.";
+    summary.textContent = "Archived official public document.";
     meetingDate.textContent = "See source record";
     agendaItem.textContent = "—";
     category.textContent = "Official record";
@@ -262,7 +262,7 @@
     const historyParams = new URLSearchParams(window.location.search);
     const historyPdf = historyParams.get("pdf");
     const historyRecord = historyPdf
-      ? documentLibrary.find((item) => item.pdf.endsWith(`/official-documents/${historyPdf}`))
+      ? documentLibrary.find((item) => item.pdf.endsWith(`/council-documents/${historyPdf}`))
       : null;
     renderDocument(historyParams.get("id") || historyRecord?.id);
   });
@@ -270,7 +270,7 @@
   const requestedPdf = params.get("pdf");
   const requestedUrl = params.get("url");
   const requestedRecord = requestedPdf
-    ? documentLibrary.find((item) => item.pdf.endsWith(`/official-documents/${requestedPdf}`))
+    ? documentLibrary.find((item) => item.pdf.endsWith(`/council-documents/${requestedPdf}`))
     : null;
 
   if (requestedUrl) renderStandalone(requestedUrl);

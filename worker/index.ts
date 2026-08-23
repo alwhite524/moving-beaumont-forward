@@ -29,6 +29,33 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    if (url.pathname.startsWith("/council-documents/") && url.pathname.endsWith(".pdf")) {
+      const relativePath = url.pathname.slice("/council-documents/".length);
+      const safePath = relativePath
+        .split("/")
+        .map((segment) => encodeURIComponent(decodeURIComponent(segment)))
+        .join("/");
+      const sourceUrl = new URL(
+        `/official-documents/${safePath}`,
+        "https://documents.beaumontintelligence.com",
+      );
+      const sourceHeaders = new Headers();
+      const range = request.headers.get("range");
+      if (range) sourceHeaders.set("range", range);
+      const source = await fetch(sourceUrl, { headers: sourceHeaders });
+      const headers = new Headers({
+        "content-type": source.headers.get("content-type") ?? "application/pdf",
+        "cache-control": "public, max-age=86400",
+        "content-disposition": `inline; filename="${relativePath.split("/").pop()?.replace(/["\\]/g, "") ?? "document.pdf"}"`,
+        "x-content-type-options": "nosniff",
+      });
+      for (const name of ["accept-ranges", "content-length", "content-range", "etag", "last-modified"]) {
+        const value = source.headers.get(name);
+        if (value) headers.set(name, value);
+      }
+      return new Response(source.body, { status: source.status, headers });
+    }
+
     const councilIntelligencePage =
       url.pathname === "/council-intelligence.html" ||
       url.pathname === "/council-briefings.html" ||
