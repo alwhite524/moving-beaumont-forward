@@ -37,11 +37,33 @@ def public_html(source: str) -> str:
     if stylesheet_count != 1 or script_count != 1:
         raise ValueError("Expected versioned dossier stylesheet and script references were not found")
 
+    result, brand_count = re.subn(
+        r'<(?:div|a) class="brand"(?: href="[^"]+")? aria-label="[^"]+">',
+        '<a class="brand" href="/" aria-label="Return to Moving Beaumont Forward home">',
+        result,
+        count=1,
+    )
+    result, brand_close_count = re.subn(
+        r'</span></(?:div|a)>\n</div></header>',
+        '</span></a>\n</div></header>',
+        result,
+        count=1,
+    )
+    if brand_count != 1 or brand_close_count != 1:
+        raise ValueError("Expected dossier brand link was not found")
+
+    # The BI-only back control points to its Police Center. MBF publishes the
+    # dossier directly, with the linked MBF logo serving as the route home.
+    result = re.sub(
+        r'\s*<div class="status-actions"><a[^>]*href="\.\./\.\./police\.html"[^>]*>.*?</a></div>',
+        '',
+        result,
+        count=1,
+    )
+
     replacements = {
         '<link href="../../favicon.png" rel="icon">': '<link href="/favicon.svg" rel="icon">',
         'src="../../mbf-logo.png"': 'src="/pd-technology-logo.png"',
-        '<div class="brand" aria-label="Moving Beaumont Forward">': '<a class="brand" href="/" aria-label="Return to Moving Beaumont Forward home">',
-        '</span></div>\n</div></header>': '</span></a>\n</div></header>',
         'href="viewer.html?doc=': 'href="/pd-source-viewer.html?doc=',
         'href="../../briefings/': 'href="/briefings/',
         '<strong>Internal research dossier</strong><span>Source-of-truth working record · Publication review not complete</span>': '<strong>Public accountability dossier</strong><span>Source-linked record · Updated as evidence becomes available</span>',
