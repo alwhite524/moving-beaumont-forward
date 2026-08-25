@@ -7,7 +7,7 @@ const priorities = [
 export default function Home() {
   return <main>
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Moving Beaumont Forward home"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" /><span>Moving Beaumont Forward</span></a>
+      <a className="brand" href="/" aria-label="Moving Beaumont Forward home"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt="" /><span>Moving Beaumont Forward</span></a>
       <nav className="header-nav" aria-label="Primary navigation"><a className="nav-button nav-button-accent" href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">Instagram ↗</a></nav>
     </header>
     <section className="hero" id="top">
