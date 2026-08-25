@@ -60,7 +60,7 @@ BI_LINK = re.compile(
 )
 BI_HEADER = re.compile(rb'<header class="app-header">.*?</header>', re.IGNORECASE | re.DOTALL)
 AGENDA_CARD_LINK = re.compile(
-    rb'<a class="text-link"[^>]*>Official agenda(?: package| and staff reports) [^<]*</a>',
+    rb'<a\b[^>]*>Official agenda(?: package| and staff reports)? [^<]*</a>',
     re.IGNORECASE,
 )
 BI_ONLY_RELATIVE_LINK = re.compile(

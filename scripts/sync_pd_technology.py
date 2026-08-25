@@ -11,7 +11,7 @@ from pathlib import Path
 
 MBF_ROOT = Path(__file__).resolve().parents[1]
 BI_ROOT = MBF_ROOT.parent / "beaumont-intelligence"
-SOURCE = BI_ROOT / "data" / "police" / "pd-technology.html"
+SOURCE = BI_ROOT / "docs" / "dossiers" / "police" / "flock-cameras.html"
 SOURCE_CSS = BI_ROOT / "docs" / "styles.css"
 SOURCE_JS = BI_ROOT / "docs" / "dossiers" / "police" / "dossier.js"
 SOURCE_LOGO = BI_ROOT / "docs" / "mbf-logo.png"
@@ -81,6 +81,7 @@ def public_html(source: str) -> str:
     video_links = {
         "flock": "https://www.youtube.com/watch?v=pJere8tXO7M&t=14901s",
         "axon": "https://www.youtube.com/watch?v=cfqIZpAQfg4&t=11176s",
+        "prepared-ai": "https://www.youtube.com/watch?v=GQRUR33qyiY&t=5373s",
         "drone": "https://www.youtube.com/watch?v=f0e7yqc3XYs&t=10461s",
         "peregrine": "https://www.youtube.com/watch?v=WnQ5OtILrzU&t=4434s",
     }
