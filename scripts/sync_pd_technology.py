@@ -55,7 +55,7 @@ def public_html(source: str) -> str:
     # The BI-only back control points to its Police Center. MBF publishes the
     # dossier directly, with the linked MBF logo serving as the route home.
     result = re.sub(
-        r'\s*<div class="status-actions"><a class="btn ghost-light" href="\.\./\.\./police\.html"[^>]*>← Back to Police Center</a></div>',
+        r'\s*<div class="status-actions"><a[^>]*href="\.\./\.\./police\.html"[^>]*>.*?</a></div>',
         '',
         result,
         count=1,
