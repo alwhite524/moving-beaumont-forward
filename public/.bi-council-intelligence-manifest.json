@@ -9,28 +9,28 @@
     },
     {
       "path": "briefing-clips.js",
-      "bytes": 4997,
-      "sha256": "9fca4028791edeb4e8e6815816f418577c7d3d234e2e72cae3b4e519113b6d28"
+      "bytes": 4894,
+      "sha256": "d247e20ab991e74e6f981361f4a2c0a8a2f1fea646989044db870bf859ddca96"
     },
     {
       "path": "briefings/2026-06-16.html",
-      "bytes": 11616,
-      "sha256": "498bfd89006073d206c171962977548eb6ef7bfc565e8214eabae5b78bb47ae3"
+      "bytes": 14665,
+      "sha256": "54362671b804f827b2efb8e2d657c8be8ef6de51eacd77910a57bd4b164da4c7"
     },
     {
       "path": "briefings/2026-07-21.html",
       "bytes": 32452,
-      "sha256": "55f67fe49eb47f2ecaa2d2942d97c8768279cfe9dcd95f3dea778fc57a42173b"
+      "sha256": "7c61b8906f729c0964725623553d2d307d1d4359fc99143157603c2759b374f1"
     },
     {
       "path": "briefings/2026-08-04.html",
       "bytes": 23337,
-      "sha256": "379db34000f0b472699fc992bb06e4234a89f4457d6de3ea9368552d4bbfd7fc"
+      "sha256": "15661084fd5a707fec8414d86265b8d46a5d4608a8666d429b018929a428db55"
     },
     {
       "path": "briefings/2026-08-18.html",
       "bytes": 22819,
-      "sha256": "94282b5e43f9cab69f6e7e2a75e72507d0151d4638a21d764761ac9c6480ed9d"
+      "sha256": "e729ba24a56d32817d5108df482b8bf40de60f3643a1cd8c8dfbe6c41fb06081"
     },
     {
       "path": "briefings/video-viewer.html",
@@ -54,8 +54,8 @@
     },
     {
       "path": "council-intelligence.html",
-      "bytes": 9370,
-      "sha256": "58936087fd0596085df4a31515f3227f2caec129eed7390e3c63ccdc9e561bac"
+      "bytes": 9757,
+      "sha256": "a63fc6ff07a6b0b0eafc147e852bf4943011b800ada1009ff8dfe821a354c936"
     },
     {
       "path": "data.js",
@@ -319,8 +319,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 63490,
-      "sha256": "326df99282aaf0973c1f4aee24193642b92f04c3db036104769cd5a518bb91fa"
+      "bytes": 64887,
+      "sha256": "e8617f582ed4d325376a5b3b2f1f668293454eec0b5629f4eaf3e30829d17774"
     }
   ]
 }

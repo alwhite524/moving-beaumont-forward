@@ -60,6 +60,7 @@ const worker = {
       "/pd-documents/flock-2023-staff-report.pdf": "https://documents.beaumontintelligence.com/official-documents/2023-05-02/d-7-staff-report-flock-encroachment-agreement.pdf",
       "/pd-documents/flock-2024-staff-report.pdf": "https://documents.beaumontintelligence.com/official-documents/2024-08-20/j-5-staff-report-flock-camera-expansion.pdf",
       "/pd-documents/axon-2025-staff-report.pdf": "https://documents.beaumontintelligence.com/official-documents/2025-12-02/j-4-staff-report-axon-technology-agreement.pdf",
+      "/pd-documents/prepared-ai-2026-staff-report.pdf": "https://pub-beaumont.escribemeetings.com/filestream.ashx?DocumentId=10275",
       "/pd-documents/drone-2026-staff-report.pdf": "https://documents.beaumontintelligence.com/official-documents/2026-04-07/j-9-staff-report-drone-as-first-responder.pdf",
       "/pd-documents/peregrine-2026-agenda-package.pdf": "https://documents.beaumontintelligence.com/official-documents/2026-08-04/august-4-2026-city-council-agenda-package.pdf",
       "/pd-documents/bpd-policy-manual.pdf": "https://www.beaumontca.gov/DocumentCenter/View/37037/Beaumont-Police-Department-Policy-PDF",
