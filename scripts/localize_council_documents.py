@@ -63,6 +63,10 @@ AGENDA_CARD_LINK = re.compile(
     rb'<a class="text-link"[^>]*>Official agenda(?: package| and staff reports) [^<]*</a>',
     re.IGNORECASE,
 )
+BI_ONLY_RELATIVE_LINK = re.compile(
+    rb'<a\b[^>]*href=["\']\.\./(?:budget(?:-evidence)?\.html(?:#[^"\']*)?|about\.html)["\'][^>]*>.*?</a>',
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 def public_facing(data: bytes, *, remove_header: bool = False, remove_agenda_cards: bool = False) -> bytes:
@@ -71,6 +75,7 @@ def public_facing(data: bytes, *, remove_header: bool = False, remove_agenda_car
         data = BI_HEADER.sub(b"", data)
     if remove_agenda_cards:
         data = AGENDA_CARD_LINK.sub(b"", data)
+    data = BI_ONLY_RELATIVE_LINK.sub(b"", data)
     data = BI_LINK.sub(lambda match: match.group(1), data)
     replacements = (
         (b"https://documents.beaumontintelligence.com/official-documents/", b"/council-documents/"),
