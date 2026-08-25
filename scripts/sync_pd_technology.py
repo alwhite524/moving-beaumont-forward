@@ -42,6 +42,7 @@ def public_html(source: str) -> str:
         'src="../../mbf-logo.png"': 'src="/pd-technology-logo.png"',
         '<div class="brand" aria-label="Moving Beaumont Forward">': '<a class="brand" href="/" aria-label="Return to Moving Beaumont Forward home">',
         '</span></div>\n</div></header>': '</span></a>\n</div></header>',
+        'href="viewer.html?doc=': 'href="/pd-source-viewer.html?doc=',
         'href="../../briefings/': 'href="/briefings/',
         '<strong>Internal research dossier</strong><span>Source-of-truth working record · Publication review not complete</span>': '<strong>Public accountability dossier</strong><span>Source-linked record · Updated as evidence becomes available</span>',
         '<span class="status-pill">Research active</span>': '<span class="status-pill">Public record active</span>',
@@ -67,10 +68,19 @@ def public_html(source: str) -> str:
             f'href="{url}" target="_blank" rel="noopener"',
         )
 
+    document_links = {
+        'href="https://www.beaumontca.gov/DocumentCenter/View/37037/Beaumont-Police-Department-Policy-PDF" target="_blank" rel="noopener"': 'href="/pd-source-viewer.html?doc=bpd-policy-450"',
+        'href="https://www.beaumontca.gov/DocumentCenter/View/37037/Beaumont-Police-Department-Policy-PDF#page=400" target="_blank" rel="noopener"': 'href="/pd-source-viewer.html?doc=bpd-policy-450"',
+        'href="https://www.beaumontca.gov/DocumentCenter/View/37037/Beaumont-Police-Department-Policy-PDF#page=526" target="_blank" rel="noopener"': 'href="/pd-source-viewer.html?doc=bpd-policy-612"',
+        'href="https://www.beaumontca.gov/DocumentCenter/View/39570/AB-481-Report-March-2025" target="_blank" rel="noopener"': 'href="/pd-source-viewer.html?doc=drone-inventory-2025"',
+    }
+    for old, new in document_links.items():
+        result = result.replace(old, new)
+
     # BI's private document viewer is not published on MBF. Keep its useful
     # link labels as plain text instead of exposing BI-only URLs or dead links.
     result = re.sub(
-        r'<a\b[^>]*href="(?:https://beaumontintelligence\.com/dossiers/police/)?viewer\.html\?doc=[^"]+"[^>]*>(.*?)</a>',
+        r'<a\b[^>]*href="https://beaumontintelligence\.com/dossiers/police/viewer\.html\?doc=[^"]+"[^>]*>(.*?)</a>',
         r'\1',
         result,
         flags=re.DOTALL,
