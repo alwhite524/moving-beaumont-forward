@@ -9,58 +9,53 @@
     },
     {
       "path": "briefing-clips.js",
-      "bytes": 4894,
-      "sha256": "d247e20ab991e74e6f981361f4a2c0a8a2f1fea646989044db870bf859ddca96"
+      "bytes": 5001,
+      "sha256": "5be51415f957844aa4558233e8ce8e14f88b5b8cbf4a5d612ce5133c26449604"
     },
     {
       "path": "briefings/2026-06-16.html",
-      "bytes": 14665,
-      "sha256": "54362671b804f827b2efb8e2d657c8be8ef6de51eacd77910a57bd4b164da4c7"
+      "bytes": 14714,
+      "sha256": "e2d11ffcf98f7015a11079f37abc7a97d2f3b217e03604000f94f5db455b76a4"
     },
     {
       "path": "briefings/2026-07-21.html",
-      "bytes": 32452,
-      "sha256": "7c61b8906f729c0964725623553d2d307d1d4359fc99143157603c2759b374f1"
+      "bytes": 32585,
+      "sha256": "de6be9f234f75cc3cadfb45e0bee20848dc1e01c63ac9d75f37eaf4bee8c994c"
     },
     {
       "path": "briefings/2026-08-04.html",
-      "bytes": 23337,
-      "sha256": "15661084fd5a707fec8414d86265b8d46a5d4608a8666d429b018929a428db55"
+      "bytes": 23277,
+      "sha256": "49d5be0f312df5df636a16a4fa7cba8204789c99531c90559197ccb7d2115b8e"
     },
     {
       "path": "briefings/2026-08-18.html",
-      "bytes": 22836,
-      "sha256": "6ca4a7e71a2bf3c3639a503feedf427b2a5bb67f07d9b9dc18c890d89887ae6e"
+      "bytes": 22979,
+      "sha256": "bdeb8e9412fac3257d609743054ca2665bc2be15eec631172e841a5821445386"
     },
     {
       "path": "briefings/2026-09-01.html",
-      "bytes": 4063,
-      "sha256": "18ea8ac12b37d8f150369667484354b3858b39178d16e77c0476cf6ea86223f0"
+      "bytes": 14891,
+      "sha256": "f4f957eda8e85676317daec9874d1960d2fe2b1f5e1ce2c05e53b9cee6b17934"
     },
     {
       "path": "briefings/video-viewer.html",
-      "bytes": 1655,
-      "sha256": "925c4c2a504f2a168602ad5feb5d3e2054a5911650925b22cdc1da618ea3e3a9"
+      "bytes": 1682,
+      "sha256": "f618f3530b2dc968ff330279dc30a3653000969007930dd3423a64c1c757c594"
     },
     {
       "path": "briefings/video-viewer.js",
-      "bytes": 2319,
-      "sha256": "0aa0e9eb3aeaee96cab7b4655fd61e476f4cbfe30522badacc5825fad101d201"
+      "bytes": 2378,
+      "sha256": "b3c67e765f3ade30bceb491c720dbc33b5d43d47ec8b94dd6e2b722f1b8223e5"
     },
     {
       "path": "council-briefings-2026.html",
-      "bytes": 9871,
-      "sha256": "8b37f9844ead754ff64a8747bce7031d5ad556744911c7dcfacf4baf2b627bda"
-    },
-    {
-      "path": "council-briefings.html",
-      "bytes": 11547,
-      "sha256": "ae5f34b047946628cbaf53fc084610731b6932ccdf8e3cd9211be654017bc171"
+      "bytes": 9796,
+      "sha256": "6648ceeed5cc2dad04a0afc87f230229836aa08030722c229d2d976de7bfd19e"
     },
     {
       "path": "council-intelligence.html",
-      "bytes": 10437,
-      "sha256": "2a75af913e5e6e6c54076bc8f7d59fbc447b29e193228a4075877f973403c236"
+      "bytes": 10517,
+      "sha256": "de50f61fdeb43fc4158f6ae1e6116a00a843ad864ba23b7d987e54150dc1dbad"
     },
     {
       "path": "data.js",
@@ -69,23 +64,23 @@
     },
     {
       "path": "documents/document-data.js",
-      "bytes": 32703,
-      "sha256": "437371406787789acc2a97e82095d1cd84c124a173da64f084076198bdc92ad6"
+      "bytes": 37024,
+      "sha256": "c781be76e559baa359269e755dfa87a076d174c7d9acad5eaf35f1f83421f3f7"
     },
     {
       "path": "documents/index.html",
-      "bytes": 19756,
-      "sha256": "b1cb6f8c2da3b63dbf315a715d3eb35fbb817efc2c672115ffe74f53f7423b42"
+      "bytes": 19872,
+      "sha256": "64730882c006b4676fa2ac8b1dc968c9f6420fde5d835bb401166ab50c291f7d"
     },
     {
       "path": "documents/viewer.html",
-      "bytes": 2356,
-      "sha256": "42317929e663f4d62a1d2ffdcbd2e1b5992686b304b98d38d97bfe8d63520d7d"
+      "bytes": 2389,
+      "sha256": "f1c65f058d258d9e46dbeae044f446566b611b0728a008bb143f1eaca30fea66"
     },
     {
       "path": "documents/viewer.js",
-      "bytes": 9746,
-      "sha256": "82eeb5295452a3e523d90dfe4379bcb433325f14118fec26924f76da5f9d1022"
+      "bytes": 10093,
+      "sha256": "0f4491f60a0680d8999af988c2081ba04ad7cf928f96c203a5042db220addf9b"
     },
     {
       "path": "favicon.png",
@@ -324,8 +319,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 65271,
-      "sha256": "fc7b29e13156e49d42be67601f09495d628d8415782ed6ac8261647f9276618a"
+      "bytes": 65795,
+      "sha256": "35cac3590d967ddea76007b69c118f4c5779e062848f02b79bcc1eab2fe6dbe5"
     }
   ]
 }
