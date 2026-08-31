@@ -12,5 +12,11 @@
   },
   "images": {
     "binding": "IMAGES"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "movingbeaumontforward.com",
+      "custom_domain": true
+    }
+  ]
 }
