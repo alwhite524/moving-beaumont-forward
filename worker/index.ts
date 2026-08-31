@@ -29,6 +29,12 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    if (url.pathname === "/council-briefings" || url.pathname === "/council-briefings.html") {
+      return env.ASSETS.fetch(
+        new Request(new URL("/council-intelligence.html", request.url), request),
+      );
+    }
+
     if (url.pathname.startsWith("/council-documents/") && url.pathname.endsWith(".pdf")) {
       const relativePath = url.pathname.slice("/council-documents/".length);
       const safePath = relativePath
@@ -86,7 +92,6 @@ const worker = {
 
     const councilIntelligencePage =
       url.pathname === "/council-intelligence.html" ||
-      url.pathname === "/council-briefings.html" ||
       url.pathname === "/council-briefings-2026.html" ||
       url.pathname === "/documents/index.html" ||
       url.pathname === "/documents/viewer.html" ||
