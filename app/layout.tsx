@@ -42,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script src="/site-nav.js" defer />
         {children}
       </body>
     </html>
