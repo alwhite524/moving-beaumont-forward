@@ -10,11 +10,7 @@ from pathlib import Path
 
 
 MBF_ROOT = Path(__file__).resolve().parents[1]
-BI_ROOT = MBF_ROOT.parent / "beaumont-intelligence"
-SOURCE = BI_ROOT / "docs" / "dossiers" / "police" / "flock-cameras.html"
-SOURCE_CSS = BI_ROOT / "docs" / "styles.css"
-SOURCE_JS = BI_ROOT / "docs" / "dossiers" / "police" / "dossier.js"
-SOURCE_LOGO = BI_ROOT / "docs" / "mbf-logo.png"
+DEFAULT_BI_ROOT = MBF_ROOT.parent / "beaumont-intelligence"
 OUTPUT = MBF_ROOT / "public" / "pd-technology-dossier.html"
 OUTPUT_CSS = MBF_ROOT / "public" / "pd-technology.css"
 OUTPUT_JS = MBF_ROOT / "public" / "pd-technology.js"
@@ -122,21 +118,28 @@ def public_html(source: str) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--bi-root", type=Path, default=DEFAULT_BI_ROOT)
     args = parser.parse_args()
 
-    required = (SOURCE, SOURCE_CSS, SOURCE_JS, SOURCE_LOGO)
+    bi_root = args.bi_root.resolve()
+    source = bi_root / "docs" / "dossiers" / "police" / "flock-cameras.html"
+    source_css = bi_root / "docs" / "styles.css"
+    source_js = bi_root / "docs" / "dossiers" / "police" / "dossier.js"
+    source_logo = bi_root / "docs" / "mbf-logo.png"
+
+    required = (source, source_css, source_js, source_logo)
     missing = [path for path in required if not path.is_file()]
     if missing:
         for path in missing:
             print(f"Missing source: {path}", file=sys.stderr)
         return 1
 
-    expected_html = public_html(SOURCE.read_text(encoding="utf-8"))
+    expected_html = public_html(source.read_text(encoding="utf-8"))
     outputs = {
         OUTPUT: expected_html.encode("utf-8"),
-        OUTPUT_CSS: SOURCE_CSS.read_bytes(),
-        OUTPUT_JS: SOURCE_JS.read_bytes(),
-        OUTPUT_LOGO: SOURCE_LOGO.read_bytes(),
+        OUTPUT_CSS: source_css.read_bytes(),
+        OUTPUT_JS: source_js.read_bytes(),
+        OUTPUT_LOGO: source_logo.read_bytes(),
     }
 
     if args.check:
@@ -151,7 +154,7 @@ def main() -> int:
     for path, data in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
-    print(f"Published {SOURCE.relative_to(BI_ROOT)} to {OUTPUT.relative_to(MBF_ROOT)}")
+    print(f"Published {source.relative_to(bi_root)} to {OUTPUT.relative_to(MBF_ROOT)}")
     return 0
 
 

@@ -15,8 +15,28 @@ export default function Home() {
       <div className="eyebrow"><span /> Beaumont, California</div>
       <h1>Moving Beaumont<br /><em>Forward.</em></h1>
       <p className="hero-copy">Beaumont information straight from the source—focused on the work, the progress, and the community we call home.</p>
-      <div className="hero-actions"><a className="primary-button vision-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button pd-button" href="/pd-technology.html">PD technology dossier <span aria-hidden="true">→</span></a><a className="secondary-button council-button" href="/council-intelligence.html">Council Intelligence briefings <span aria-hidden="true">→</span></a></div>
+      <div className="hero-actions"><a className="primary-button vision-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button pd-button" href="/pd-technology.html">PD technology dossier <span aria-hidden="true">→</span></a><a className="secondary-button council-button" href="/briefings/2026-09-01.html">September 1 Council briefing <span aria-hidden="true">→</span></a></div>
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
+    </section>
+    <section className="upcoming-briefing" aria-labelledby="upcoming-briefing-title">
+      <div className="upcoming-heading">
+        <div><p>City Council</p><h2 id="upcoming-briefing-title">Upcoming Council briefing</h2></div>
+        <p>See what is coming before Council, review the source documents, and return after the meeting for verified actions and votes.</p>
+      </div>
+      <div className="upcoming-feature">
+        <article>
+          <span className="upcoming-pill">September 1, 2026 · Pre-meeting briefing</span>
+          <h3>Three public hearings and four action items</h3>
+          <p>Council will consider the Sustainability Plan, short-term-rental regulations, e-bike safety rules, sponsorships, a digital billboard conversion, and the 2027 Beaumont Nights schedule.</p>
+          <div className="upcoming-facts"><span><strong>Closed session</strong>5:00 PM</span><span><strong>Regular meeting</strong>6:00 PM</span><span><strong>Status</strong>Agenda published</span></div>
+          <div className="upcoming-actions"><a className="primary-button" href="/briefings/2026-09-01.html">Open the September 1 briefing <span aria-hidden="true">→</span></a><a href="/council-briefings.html">Browse Council briefings</a></div>
+        </article>
+        <aside>
+          <p>On the agenda</p>
+          <ul><li>2026 Sustainability Plan</li><li>Short-term rental program</li><li>E-bikes and e-conveyances</li><li>Sponsorships and Beaumont Nights</li></ul>
+          <a href="/council-intelligence.html">Explore Council Intelligence <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
     </section>
     <section className="priorities" id="priorities">
       <div className="section-intro"><p>What moves us</p><h2>Progress you can<br />see and feel.</h2></div>

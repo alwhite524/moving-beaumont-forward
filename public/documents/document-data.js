@@ -1,6 +1,6 @@
 /*
 --------------------------------------------------
-Moving Beaumont Forward
+Beaumont Intelligence
 Official Source Library
 Document Metadata
 Version 1.3.0
@@ -18,7 +18,7 @@ const documentLibrary = [
     "category": "Finance",
     "documentType": "Staff Report",
     "summary": "Staff report supporting the proposed refunding of outstanding Community Facilities District bonds.",
-    "pdf": "/council-documents/2026-07-21/j-1-staff-report-2026-cfd-refunding.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-1-staff-report-2026-cfd-refunding.pdf",
     "briefing": "../briefings/2026-07-21.html#bonds",
     "relatedDocuments": [
       "ci-2026-07-21-j1-attachment-a"
@@ -44,7 +44,7 @@ const documentLibrary = [
     "category": "Finance",
     "documentType": "Attachment",
     "summary": "Good-faith estimates associated with the proposed 2026 CFD bond refunding.",
-    "pdf": "/council-documents/2026-07-21/j-1-attachment-a-good-faith-estimates.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-1-attachment-a-good-faith-estimates.pdf",
     "briefing": "../briefings/2026-07-21.html#bonds",
     "relatedDocuments": [
       "ci-2026-07-21-j1-staff-report"
@@ -66,7 +66,7 @@ const documentLibrary = [
     "category": "Utilities",
     "documentType": "Staff Report",
     "summary": "Staff report supporting award of a professional services agreement to update Beaumont's Wastewater Master Plan.",
-    "pdf": "/council-documents/2026-07-21/j-2-staff-report-award-psa-to-update-the-wastewater-master-plan.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-2-staff-report-award-psa-to-update-the-wastewater-master-plan.pdf",
     "briefing": "../briefings/2026-07-21.html#wastewater",
     "relatedDocuments": [],
     "relatedIntelligence": [
@@ -90,7 +90,7 @@ const documentLibrary = [
     "category": "Transportation",
     "documentType": "Staff Report",
     "summary": "Staff report supporting award of the FY26 annual citywide street rehabilitation public works agreement.",
-    "pdf": "/council-documents/2026-07-21/j-3-staff-report-public-works-agreement-for-the-fy26-citywide-street-rehabilitation.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-3-staff-report-public-works-agreement-for-the-fy26-citywide-street-rehabilitation.pdf",
     "briefing": "../briefings/2026-07-21.html#streets",
     "relatedDocuments": [
       "ci-2026-07-21-j3-attachment-a",
@@ -118,7 +118,7 @@ const documentLibrary = [
     "category": "Transportation",
     "documentType": "Attachment",
     "summary": "Bid tabulation for the FY26 annual citywide street rehabilitation and maintenance project.",
-    "pdf": "/council-documents/2026-07-21/j-3-attachment-a-bid-tabulation-fy26-annual-citywide-street-rehabilitation-and-maintenance.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-3-attachment-a-bid-tabulation-fy26-annual-citywide-street-rehabilitation-and-maintenance.pdf",
     "briefing": "../briefings/2026-07-21.html#streets",
     "relatedDocuments": [
       "ci-2026-07-21-j3-staff-report",
@@ -142,7 +142,7 @@ const documentLibrary = [
     "category": "Transportation",
     "documentType": "Agreement",
     "summary": "Public works agreement with Matich Corporation for the FY26 street rehabilitation project.",
-    "pdf": "/council-documents/2026-07-21/j-3-attachment-d-matich-public-works-agreement.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-3-attachment-d-matich-public-works-agreement.pdf",
     "briefing": "../briefings/2026-07-21.html#streets",
     "relatedDocuments": [
       "ci-2026-07-21-j3-staff-report",
@@ -166,7 +166,7 @@ const documentLibrary = [
     "category": "Transportation",
     "documentType": "Disclosure",
     "summary": "Levine Act disclosure statement associated with the street rehabilitation agreement.",
-    "pdf": "/council-documents/2026-07-21/j-3-attachment-e-levine-act-statement.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-3-attachment-e-levine-act-statement.pdf",
     "briefing": "../briefings/2026-07-21.html#streets",
     "relatedDocuments": [
       "ci-2026-07-21-j3-staff-report",
@@ -190,7 +190,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Staff Report",
     "summary": "Staff report supporting approval of the Outdoor Recreation Legacy Program grant agreement for Stewart Park Phase II.",
-    "pdf": "/council-documents/2026-07-21/j-4-staff-report-grant-agreement-for-the-outdoor-recreation-legacy-program-orlp-stewart-park.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-4-staff-report-grant-agreement-for-the-outdoor-recreation-legacy-program-orlp-stewart-park.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "intelligenceCenter": "../stewart-park.html",
     "relatedDocuments": [
@@ -223,7 +223,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Attachment",
     "summary": "Special award conditions associated with the Outdoor Recreation Legacy Program grant for Stewart Park Phase II.",
-    "pdf": "/council-documents/2026-07-21/j-4-attachment-a-special-award-conditions-letter.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-4-attachment-a-special-award-conditions-letter.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j4-staff-report",
@@ -247,7 +247,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Attachment",
     "summary": "Grant contract provisions governing the Stewart Park Phase II Outdoor Recreation Legacy Program award.",
-    "pdf": "/council-documents/2026-07-21/j-4-attachment-b-contract-with-provisions.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-4-attachment-b-contract-with-provisions.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j4-staff-report",
@@ -271,7 +271,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Attachment",
     "summary": "Cover correspondence accompanying the Stewart Park Phase II grant contract materials.",
-    "pdf": "/council-documents/2026-07-21/j-4-attachment-c-contract-cover-letter.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-4-attachment-c-contract-cover-letter.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j4-staff-report",
@@ -295,7 +295,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Staff Report",
     "summary": "Staff report supporting Amendment No. 4 with PlaceWorks for Stewart Park Phase II design and construction-related services.",
-    "pdf": "/council-documents/2026-07-21/j-5-staff-report-placeworks-inc-amendment-4.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-5-staff-report-placeworks-inc-amendment-4.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "intelligenceCenter": "../stewart-park.html",
     "relatedDocuments": [
@@ -328,7 +328,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Exhibit",
     "summary": "Cost proposal associated with PlaceWorks Amendment No. 4 for Stewart Park Phase II.",
-    "pdf": "/council-documents/2026-07-21/j-5-exhibit-b-cost-proposal.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-5-exhibit-b-cost-proposal.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j5-staff-report",
@@ -352,7 +352,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Agreement",
     "summary": "The proposed fourth amendment to the City's professional services agreement with PlaceWorks.",
-    "pdf": "/council-documents/2026-07-21/j-5-exhibit-c-placeworks-amendment-4.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-5-exhibit-c-placeworks-amendment-4.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j5-staff-report",
@@ -376,7 +376,7 @@ const documentLibrary = [
     "category": "Parks",
     "documentType": "Disclosure",
     "summary": "Levine Act disclosure form associated with PlaceWorks Amendment No. 4.",
-    "pdf": "/council-documents/2026-07-21/j-5-exhibit-d-levine-act-statement-form-beaumont.pdf",
+    "pdf": "https://documents.beaumontintelligence.com/official-documents/2026-07-21/j-5-exhibit-d-levine-act-statement-form-beaumont.pdf",
     "briefing": "../briefings/2026-07-21.html#stewart-park",
     "relatedDocuments": [
       "ci-2026-07-21-j5-staff-report",
@@ -403,7 +403,7 @@ const august18ConsentDocument = (id, title, agendaItem, category, documentType, 
   category,
   documentType,
   summary,
-  pdf: `/council-documents/2026-08-18/${pdf}`,
+  pdf: `https://documents.beaumontintelligence.com/official-documents/2026-08-18/${pdf}`,
   briefing: "../briefings/2026-08-18.html#consent-highlights",
   relatedDocuments,
   relatedIntelligence: [{ title: "August 18 Council Briefing", url: "../briefings/2026-08-18.html#consent-highlights" }]
@@ -459,7 +459,7 @@ const historicalBriefingDocument = (meetingDate, meetingLabel, briefing, row) =>
   category: row[3],
   documentType: row[4],
   summary: row[5],
-  pdf: `/council-documents/${meetingDate}/${row[6]}`,
+  pdf: `https://documents.beaumontintelligence.com/official-documents/${meetingDate}/${row[6]}`,
   briefing,
   relatedDocuments: [],
   relatedIntelligence: []
@@ -524,3 +524,28 @@ documentLibrary.find((item) => item.id === "ci-2026-08-04-j1-scoring").pageImage
   renderedPageSeries("j1-scoring", 12, true);
 documentLibrary.find((item) => item.id === "ci-2026-08-04-j1-agreement").pageImages =
   renderedPageSeries("j1-agreement", 18, true);
+
+[
+  ["g3-staff", "Traffic Signal Battery Backup Systems", "G.3", "Transportation", "Staff Report", "Staff report supporting the contract for traffic-signal battery backup systems.", "g-3-staff-report-signal-battery-backups.pdf", "consent"],
+  ["g5-staff", "Office of Traffic Safety Grant", "G.5", "Public Safety", "Staff Report", "Staff report supporting acceptance of the $80,000 Office of Traffic Safety grant.", "g-5-staff-report-ots-grant.pdf", "consent"],
+  ["g6-staff", "Rubrik Disaster Recovery Renewal", "G.6", "Information Technology", "Staff Report", "Staff report supporting the five-year Rubrik disaster-recovery renewal.", "g-6-staff-report-rubrik-disaster-recovery.pdf", "consent"],
+  ["g7-staff", "Accounts Receivable Report", "G.7", "Finance", "Staff Report", "Staff report presenting aged accounts receivable and the proposed write-off.", "g-7-staff-report-accounts-receivable.pdf", "consent"],
+  ["i1-staff", "2026 Beaumont Sustainability Plan", "I.1", "Sustainability", "Staff Report", "Staff report supporting adoption of the 2026 Beaumont Sustainability Plan.", "i-1-staff-report-sustainability-plan.pdf", "sustainability"],
+  ["i1-plan", "2026 Beaumont Sustainability Plan", "I.1", "Sustainability", "Plan", "The proposed 2026 Beaumont Sustainability Plan.", "i-1-attachment-a-2026-sustainability-plan.pdf", "sustainability"],
+  ["i1-eir", "Sustainability Plan EIR Addendum", "I.1", "Sustainability", "Environmental Review", "Addendum to the General Plan environmental impact report for the Sustainability Plan.", "i-1-attachment-b-eir-addendum.pdf", "sustainability"],
+  ["i2-staff", "Short-Term Rental Program", "I.2", "Neighborhood Regulation", "Staff Report", "Staff report supporting the proposed short-term rental program and ordinance.", "i-2-staff-report-short-term-rental-program.pdf", "short-term-rentals"],
+  ["i2-ordinance", "Draft Short-Term Rental Ordinance", "I.2", "Neighborhood Regulation", "Ordinance", "Proposed ordinance establishing Beaumont's short-term rental regulations.", "i-2-attachment-a-draft-short-term-rental-ordinance.pdf", "short-term-rentals"],
+  ["i2-fees", "Short-Term Rental Fee Resolution", "I.2", "Neighborhood Regulation", "Resolution", "Proposed fee schedule for the short-term rental program.", "i-2-attachment-b-short-term-rental-fee-resolution.pdf", "short-term-rentals"],
+  ["i3-staff", "E-Bikes and E-Conveyances", "I.3", "Public Safety", "Staff Report", "Staff report supporting proposed rules for e-bikes and other electric conveyances.", "i-3-staff-report-e-bikes-e-conveyances.pdf", "e-bikes"],
+  ["i3-ordinance", "Draft E-Bike Ordinance", "I.3", "Public Safety", "Ordinance", "Proposed ordinance regulating e-bikes and other electric conveyances.", "i-3-attachment-a-draft-e-bike-ordinance.pdf", "e-bikes"],
+  ["i3-citations", "E-Bike Citation Resolution", "I.3", "Public Safety", "Resolution", "Proposed administrative citation schedule for e-bike and e-conveyance violations.", "i-3-attachment-b-citation-resolution.pdf", "e-bikes"],
+  ["j1-staff", "Chamber of Commerce MOU and Sponsorships", "J.1", "Economic Development", "Staff Report", "Staff report supporting the Chamber of Commerce memorandum of understanding and sponsorship funding.", "j-1-staff-report-chamber-mou-sponsorships.pdf", "actions"],
+  ["j2-staff", "Lamar Digital Billboard Conversion", "J.2", "Development", "Staff Report", "Staff report supporting conversion of one billboard face to a digital display.", "j-2-staff-report-lamar-digital-billboard.pdf", "actions"],
+  ["j3-staff", "Citywide Sponsorship Policy", "J.3", "Governance", "Staff Report", "Staff report supporting a citywide policy for sponsorship applications and awards.", "j-3-staff-report-citywide-sponsorship-policy.pdf", "actions"],
+  ["j4-staff", "2027 Beaumont Nights", "J.4", "Community Events", "Staff Report", "Staff report presenting the proposed 2027 Beaumont Nights calendar and beer-garden option.", "j-4-staff-report-2027-beaumont-nights.pdf", "actions"]
+].forEach((row) => documentLibrary.push(historicalBriefingDocument(
+  "2026-09-01",
+  "September 1, 2026 City Council Meeting",
+  `../briefings/2026-09-01.html#${row[7]}`,
+  row
+)));
