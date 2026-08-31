@@ -19,21 +19,18 @@ export default function Home() {
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
     </section>
     <section className="upcoming-briefing" aria-labelledby="upcoming-briefing-title">
-      <div className="upcoming-heading">
-        <div><p>City Council</p><h2 id="upcoming-briefing-title">Upcoming Council briefing</h2></div>
-        <p>See what is coming before Council, review the source documents, and return after the meeting for verified actions and votes.</p>
-      </div>
       <div className="upcoming-feature">
         <article>
-          <span className="upcoming-pill">September 1, 2026 · Pre-meeting briefing</span>
-          <h3>Three public hearings and four action items</h3>
-          <p>Council will consider the Sustainability Plan, short-term-rental regulations, e-bike safety rules, sponsorships, a digital billboard conversion, and the 2027 Beaumont Nights schedule.</p>
-          <div className="upcoming-facts"><span><strong>Closed session</strong>5:00 PM</span><span><strong>Regular meeting</strong>6:00 PM</span><span><strong>Status</strong>Agenda published</span></div>
-          <div className="upcoming-actions"><a className="primary-button" href="/council-intelligence.html">Browse all Council briefings <span aria-hidden="true">→</span></a></div>
+          <span className="upcoming-label">Upcoming Council meeting</span>
+          <h3 id="upcoming-briefing-title">September 1 City Council meeting</h3>
+          <p>The agenda is published. Tuesday&apos;s meeting includes public hearings on sustainability, short-term rentals, and e-bikes, plus decisions on sponsorships, a billboard conversion, and Beaumont Nights.</p>
+          <div className="upcoming-actions"><a href="/briefings/2026-09-01.html">Open the September 1 briefing <span aria-hidden="true">→</span></a><a href="/council-intelligence.html">Council Briefings <span aria-hidden="true">→</span></a></div>
         </article>
         <aside>
-          <p>On the agenda</p>
-          <ul><li>2026 Sustainability Plan</li><li>Short-term rental program</li><li>E-bikes and e-conveyances</li><li>Sponsorships and Beaumont Nights</li></ul>
+          <span className="meeting-status">Agenda published</span>
+          <strong>September 1, 2026</strong>
+          <p>Regular meeting · 6:00 PM</p>
+          <div className="meeting-note">Closed session begins at 5:00 PM and the regular meeting at 6:00 PM. After the meeting, the same page will become the verified outcome record.</div>
         </aside>
       </div>
     </section>
