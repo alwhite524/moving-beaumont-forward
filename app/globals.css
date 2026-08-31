@@ -3,7 +3,7 @@
 :root { --navy: #092c58; --red: #c82727; --blue: #0c3b70; --sky: #edf5fb; --cream: #f7f5f0; --ink: #092c58; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--navy); color: white; font-family: var(--font-geist-sans), Arial, sans-serif; }
+body { margin: 0; background: var(--navy); color: white; font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 20px; }
 a { color: inherit; }
 .site-header { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 26px 6vw; }
 .brand { display: flex; gap: 13px; align-items: center; text-decoration: none; font-weight: 650; letter-spacing: -.02em; }
@@ -41,7 +41,7 @@ h1 em { color: white; font-family: Georgia, serif; font-weight: 400; text-decora
 .upcoming-facts span { display: grid; gap: 4px; color: #486075; font-size: 14px; }
 .upcoming-facts strong { color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 .upcoming-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
-.upcoming-actions > a:last-child, .upcoming-feature aside > a { color: var(--red); font-weight: 750; text-underline-offset: 5px; }
+.upcoming-actions > a:not(.primary-button):last-child, .upcoming-feature aside > a { color: var(--red); font-weight: 750; text-underline-offset: 5px; }
 .upcoming-feature aside { padding: 42px 34px; background: var(--navy); color: white; }
 .upcoming-feature aside > p { color: #ff7777; }
 .upcoming-feature ul { margin: 0 0 32px; padding: 0; list-style: none; }

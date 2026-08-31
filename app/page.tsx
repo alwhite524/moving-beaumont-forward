@@ -15,7 +15,7 @@ export default function Home() {
       <div className="eyebrow"><span /> Beaumont, California</div>
       <h1>Moving Beaumont<br /><em>Forward.</em></h1>
       <p className="hero-copy">Beaumont information straight from the source—focused on the work, the progress, and the community we call home.</p>
-      <div className="hero-actions"><a className="primary-button vision-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button pd-button" href="/pd-technology.html">PD technology dossier <span aria-hidden="true">→</span></a><a className="secondary-button council-button" href="/council-briefings">Council briefings <span aria-hidden="true">→</span></a></div>
+      <div className="hero-actions"><a className="primary-button vision-button" href="#priorities">See the vision <span aria-hidden="true">↓</span></a><a className="secondary-button pd-button" href="/pd-technology.html">PD technology dossier <span aria-hidden="true">→</span></a><a className="secondary-button council-button" href="/council-intelligence.html">Council briefings <span aria-hidden="true">→</span></a></div>
       <div className="route-line" aria-hidden="true"><span /><i /><span /><i /><span /></div>
     </section>
     <section className="upcoming-briefing" aria-labelledby="upcoming-briefing-title">
@@ -29,7 +29,7 @@ export default function Home() {
           <h3>Three public hearings and four action items</h3>
           <p>Council will consider the Sustainability Plan, short-term-rental regulations, e-bike safety rules, sponsorships, a digital billboard conversion, and the 2027 Beaumont Nights schedule.</p>
           <div className="upcoming-facts"><span><strong>Closed session</strong>5:00 PM</span><span><strong>Regular meeting</strong>6:00 PM</span><span><strong>Status</strong>Agenda published</span></div>
-          <div className="upcoming-actions"><a className="primary-button" href="/council-briefings">Browse all Council briefings <span aria-hidden="true">→</span></a></div>
+          <div className="upcoming-actions"><a className="primary-button" href="/council-intelligence.html">Browse all Council briefings <span aria-hidden="true">→</span></a></div>
         </article>
         <aside>
           <p>On the agenda</p>
