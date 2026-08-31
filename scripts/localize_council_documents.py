@@ -50,6 +50,16 @@ def localized(data: bytes) -> bytes:
     )
     for old, new in replacements:
         data = data.replace(old, new)
+    data = re.sub(
+        rb'parsedUrl\.protocol !== "https:" \|\|\s*parsedUrl\.hostname !== "documents\.beaumontintelligence\.com"',
+        b'parsedUrl.origin !== window.location.origin ||\n        !parsedUrl.pathname.startsWith("/council-documents/")',
+        data,
+    )
+    data = re.sub(
+        rb'if \(requestedUrl\) renderStandalone\(requestedUrl\);\s*else renderDocument\(params\.get\("id"\) \|\| requestedRecord\?\.id\);',
+        b'if (requestedUrl) renderStandalone(requestedUrl);\n  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);\n  else renderDocument(params.get("id") || requestedRecord?.id);',
+        data,
+    )
     data = re.sub(rb"(?m)^[ \t]+\r?$", b"", data)
     return data
 
@@ -102,7 +112,9 @@ def main() -> int:
     expected = {
         path: public_facing(
             path.read_bytes(),
-            remove_header=path in council and path.suffix.lower() == ".html",
+            # Keep the MBF header and Home navigation. BI headers are localized
+            # below instead of being removed from the public page.
+            remove_header=False,
             remove_agenda_cards=path == PUBLIC / "council-intelligence.html",
         )
         for path in files
