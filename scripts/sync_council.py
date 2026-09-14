@@ -12,7 +12,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
-HEADER = '''<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Council Briefings</small><em>Connecting Today’s Decisions to Tomorrow’s Beaumont.</em></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a></nav></div></header>'''
+HEADER = '''<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Council Briefings</small><em>Connecting Today’s Decisions to Tomorrow’s Beaumont.</em></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a><a href="/council-meeting-sources.html">Videos &amp; agenda packets</a></nav></div></header>'''
 FOOTER = '''<footer class="footer"><div class="wrap"><strong>Moving Beaumont Forward</strong><p><a href="/council-briefings.html">Council briefings</a> · <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener">Instagram</a></p></div></footer>'''
 
 def plain(text):
@@ -38,7 +38,7 @@ def main():
     meeting_sources = {r['date']:r for r in json.loads(meeting_data.split('=',1)[1].strip().rstrip(';'))}
     files = [p for p in (source/'briefings').glob('*') if re.match(r'\d{4}-\d{2}-\d{2}(?:-sources)?\.(html|js)$', p.name) and date.fromisoformat(p.name[:10]) >= cutoff]
     files += [source/'briefings'/name for name in ['video-viewer.html', 'video-viewer.js']]
-    files += [source/name for name in ['styles.css', 'meeting-records.css', 'briefing-clips.js', 'briefing-record-documents.js', 'documents/viewer.html', 'documents/viewer.js']]
+    files += [source/name for name in ['council-meeting-sources.html', 'council-meeting-sources.js', 'styles.css', 'meeting-records.css', 'briefing-clips.js', 'briefing-record-documents.js', 'documents/viewer.html', 'documents/viewer.js']]
     bundled = {p.relative_to(source).as_posix() for p in files}
     bundled.update(['app.js', 'documents/document-data.js', 'council-briefings.html', 'moving-beaumont-forward-logo.jpg', 'favicon.png'])
 
@@ -55,7 +55,7 @@ def main():
         local = posixpath.normpath(parts.path.lstrip('/') if parts.path.startswith('/') or parts.netloc else posixpath.join(posixpath.dirname(page), parts.path))
         if local in ('index.html', '.'):
             return '/'
-        if local in ('council-intelligence.html', 'council-briefings-2026.html', 'council-meeting-sources.html'):
+        if local in ('council-intelligence.html', 'council-briefings-2026.html'):
             return '/council-briefings.html'
         if local in ('mbf-logo.png',):
             return '/moving-beaumont-forward-logo.jpg'
@@ -109,6 +109,12 @@ def main():
     for p in files:
         rel = p.relative_to(source).as_posix()
         text = p.read_text(encoding='utf-8-sig')
+        if rel == 'council-meeting-sources.js':
+            text = 'window.BI_COUNCIL_MEETING_SOURCES=' + json.dumps([r for r in meeting_sources.values() if date.fromisoformat(r['date']) >= cutoff]) + ';'
+        if rel == 'council-meeting-sources.html':
+            text = text.replace('const records = window.BI_COUNCIL_MEETING_SOURCES || [];', '''const now = new Date();
+      const cutoff = new Date(now); cutoff.setFullYear(cutoff.getFullYear()-1);
+      const records = (window.BI_COUNCIL_MEETING_SOURCES || []).filter(r => new Date(r.date+'T23:59:59') >= cutoff);''')
         if rel.startswith('briefings/'):
             text = re.sub(r'<script[^>]+src=["\'][^"\']*(?<!-)data\.js[^"\']*["\'][^>]*></script>', '', text)
             meeting_video = meeting_sources.get(p.name[:10],{}).get('video')
@@ -144,7 +150,7 @@ def main():
     past = ''.join(card(r) for r in catalog if r['date'] < today.isoformat())
     archive = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Council Briefings | Moving Beaumont Forward</title><meta name="description" content="Upcoming Beaumont City Council briefings and the previous 12 months of meeting records, interactive agendas, and videos."><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/council-brand.css"><script defer src="/council-window.js"></script></head><body><a class="skip-link" href="#main">Skip to content</a>{HEADER}<main id="main"><section class="archive-intro"><div class="wrap"><h1>Council briefings</h1><p>What’s coming before Council. What happened at recent meetings.</p><p>Read the briefing, explore the agenda, and follow the official documents and meeting video.</p></div></section><section class="archive-section" data-record-section><div class="wrap"><h2>Upcoming meetings</h2><p>Pre-meeting briefings for published agendas.</p><div class="archive-list" id="upcoming-records">{upcoming}</div><p class="archive-empty" {'hidden' if upcoming else ''}>No upcoming pre-meeting briefing is available yet.</p></div></section><section class="archive-section" data-record-section><div class="wrap"><h2>Previous 12 months</h2><p>Available briefings and meeting records, with interactive agendas and video where available.</p><div class="archive-list" id="past-records">{past}</div><p class="archive-empty" {'hidden' if past else ''}>No meeting records are available in this period.</p></div></section></main>{FOOTER}</body></html>'''
     (PUBLIC/'council-briefings.html').write_text(archive, encoding='utf-8')
-    for name in ['council-intelligence.html', 'council-briefings-2026.html', 'council-meeting-sources.html']:
+    for name in ['council-intelligence.html', 'council-briefings-2026.html']:
         (PUBLIC/name).write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>Council Briefings | Moving Beaumont Forward</title><meta http-equiv="refresh" content="0;url=/council-briefings.html"><a href="/council-briefings.html">Council briefings</a></html>', encoding='utf-8')
     for p in (PUBLIC/'briefings').glob('*'):
         if p.is_file() and p.relative_to(PUBLIC).as_posix() not in bundled:
