@@ -141,11 +141,24 @@ def main():
     catalog.sort(key=lambda r: r['date'], reverse=True)
     (ROOT/'app/council-records.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     (PUBLIC/'council-records.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    reference_cards = {}
+    reference = (source/'council-intelligence.html').read_text(encoding='utf-8-sig')
+    for match in re.finditer(r'<details\b[^>]*class="[^"]*council-meeting-card[^"]*"[^>]*>.*?</details>', reference, re.S):
+        date_match = re.search(r'briefings/(\d{4}-\d{2}-\d{2})\.html', match.group(0))
+        if date_match:
+            reference_cards[date_match.group(1)] = match.group(0)
     def card(r):
         actions = f'<a class="btn" href="{r["briefing"]}">Open briefing</a>'
         if r['agenda']: actions += f'<a class="btn secondary" href="{r["agenda"]}">Interactive agenda</a>'
         label = date.fromisoformat(r['date']).strftime('%B %d, %Y').replace(' 0', ' ')
-        return f'<article class="archive-card" data-meeting-date="{r["date"]}"><time datetime="{r["date"]}">{label}</time><h3>{html.escape(r["title"])}</h3><p>{html.escape(r["summary"])}</p><div class="status-actions">{actions}</div></article>'
+        if r['date'] in reference_cards:
+            result = transform(reference_cards[r['date']], 'council-intelligence.html')
+            result = re.sub(r'(<details\b[^>]*?)\s+open(?=[\s>])', r'\1', result)
+            result = result.replace('<details ', f'<details data-meeting-date="{r["date"]}" ', 1)
+            result = re.sub(r'(<div class="status-actions">).*?(</div>)', lambda m:m.group(1)+actions+m.group(2), result, flags=re.S)
+            if r['date'] >= today.isoformat(): result = result.replace('<details ', '<details open ', 1)
+            return result
+        return f'<details class="briefing-card council-meeting-card" data-meeting-date="{r["date"]}"><summary><span><strong>{html.escape(r["title"])}</strong><small>{html.escape(r["summary"])}</small></span><i aria-hidden="true"></i></summary><div class="briefing-card-body"><time datetime="{r["date"]}">{label}</time><div class="status-actions">{actions}</div></div></details>'
     upcoming = ''.join(card(r) for r in catalog if r['date'] >= today.isoformat())
     past = ''.join(card(r) for r in catalog if r['date'] < today.isoformat())
     archive = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Council Briefings | Moving Beaumont Forward</title><meta name="description" content="Upcoming Beaumont City Council briefings and the previous 12 months of meeting records, interactive agendas, and videos."><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/council-brand.css"><script defer src="/council-window.js"></script></head><body><a class="skip-link" href="#main">Skip to content</a>{HEADER}<main id="main"><section class="archive-intro"><div class="wrap"><h1>Council briefings</h1><p>What’s coming before Council. What happened at recent meetings.</p><p>Read the briefing, explore the agenda, and follow the official documents and meeting video.</p></div></section><section class="archive-section" data-record-section><div class="wrap"><h2>Upcoming meetings</h2><p>Pre-meeting briefings for published agendas.</p><div class="archive-list" id="upcoming-records">{upcoming}</div><p class="archive-empty" {'hidden' if upcoming else ''}>No upcoming pre-meeting briefing is available yet.</p></div></section><section class="archive-section" data-record-section><div class="wrap"><h2>Previous 12 months</h2><p>Available briefings and meeting records, with interactive agendas and video where available.</p><div class="archive-list" id="past-records">{past}</div><p class="archive-empty" {'hidden' if past else ''}>No meeting records are available in this period.</p></div></section></main>{FOOTER}</body></html>'''

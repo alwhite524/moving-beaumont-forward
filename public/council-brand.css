@@ -5,3 +5,4 @@ body{font-size:16px;font-family:Arial,Helvetica,sans-serif}.app-header .brand-co
 
 @media(max-width:980px){.app-header .header-row{flex-wrap:wrap;padding:16px 0}.app-header .brand-logo{width:72px;height:72px}.app-header .primary-nav{gap:26px}.app-header .brand-copy strong{font-size:1.4rem}}
 @media(max-width:650px){.app-header .brand-copy strong{font-size:1.125rem;white-space:normal}.app-header .brand-copy em{font-size:.85rem}.app-header .brand-logo{width:60px;height:60px;flex:0 0 60px}.app-header .header-row{gap:12px}.app-header .primary-nav{flex-wrap:wrap;gap:24px}.app-header .primary-nav a{font-size:1rem}}
+.archive-list{display:block}.archive-list .council-meeting-card + .council-meeting-card{margin-top:24px}
