@@ -14,3 +14,17 @@ The importer includes dated briefings and interactive agendas from the previous 
 The original retired MBF pages and copied document images are preserved locally under `legacy-static/pre-council-overhaul/` and in Git history. They are excluded from the published site. The former intelligence and year-archive URLs redirect to Council Briefings; dossier routes return Gone.
 
 The existing npm lockfile is retained. On a Windows host without npm, the equivalent existing build entrypoint is `node node_modules/vinext/dist/cli.js build`.
+
+## Custom-domain release
+
+`movingbeaumontforward.com` is served by the account-owned Cloudflare Worker `moving-beaumont-forward`. It is **not** served by the Sites deployment, even though Sites also lists the hostname. Publishing only to Sites leaves the custom domain stale.
+
+After publishing the validated build to Sites, deploy that same output to the existing custom-domain Worker:
+
+```powershell
+node scripts/prepare-custom-domain.mjs
+node node_modules/wrangler/bin/wrangler.js deploy --config .wrangler/mbf-domain.json --keep-vars --dry-run
+node node_modules/wrangler/bin/wrangler.js deploy --config .wrangler/mbf-domain.json --keep-vars
+```
+
+Verify the custom-domain homepage and council archive show the current upcoming briefing, and `/pd-technology.html` and `/pd-technology-dossier` return 410. Preserve the existing IMAGES/ASSETS bindings and keep workers.dev disabled. Do not change BI or its access settings.
