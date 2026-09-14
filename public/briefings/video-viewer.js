@@ -22,7 +22,7 @@
     return;
   }
 
-  document.title = `${title} | Beaumont Intelligence`;
+  document.title = `${title} | Moving Beaumont Forward`;
   document.querySelector('#video-title').textContent = title;
   document.querySelector('#video-description').textContent = `Playback is limited to ${range}.`;
   document.querySelector('#video-end-time').textContent = range.split('–')[1] || 'the verified endpoint';
