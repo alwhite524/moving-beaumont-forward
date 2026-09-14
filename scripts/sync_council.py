@@ -13,7 +13,7 @@ from urllib.parse import urlsplit, urlunsplit
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
 HEADER = '''<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Council Briefings</small><em>Connecting Today’s Decisions to Tomorrow’s Beaumont.</em></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a><a href="/council-meeting-sources.html">Videos &amp; agenda packets</a></nav></div></header>'''
-FOOTER = '''<footer class="footer"><div class="wrap"><strong>Moving Beaumont Forward</strong><p><a href="/council-briefings.html">Council briefings</a> · <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener">Instagram</a></p></div></footer>'''
+FOOTER = '''<footer class="footer"><div class="wrap mbf-footer"><strong>Moving Beaumont Forward</strong><span class="hosting-disclosure">Hosting Paid for by LloydWhiteForBeaumont ID #1469630</span><p><a href="/council-briefings.html">Council briefings</a> · <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener">Instagram</a></p></div></footer>'''
 
 def plain(text):
     return html.unescape(re.sub('<[^>]+>', '', text)).strip()

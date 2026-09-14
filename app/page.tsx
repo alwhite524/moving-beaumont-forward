@@ -21,6 +21,6 @@ export default function Home() {
       </div></section>
       <section className="section"><div className="wrap"><div className="section-heading"><div><div className="eyebrow">Previous 12 months</div><h2>Recent council meetings</h2></div><a className="text-link" href="/council-briefings.html">View all recent briefings →</a></div><div className="mbf-record-grid">{recent.map(record => <article className="card" key={record.date}><time dateTime={record.date}>{label(record.date)}</time><h3>{record.title}</h3><p>{record.summary}</p><div className="status-actions"><a className="text-link" href={record.briefing}>Open meeting record →</a>{record.agenda && <a className="text-link" href={record.agenda}>Interactive agenda →</a>}</div></article>)}</div></div></section>
     </main>
-    <footer className="footer"><div className="wrap mbf-footer"><strong>© {new Date().getFullYear()} Moving Beaumont Forward</strong><a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">@movingbeaumontforward</a></div></footer>
+    <footer className="footer"><div className="wrap mbf-footer"><strong>© {new Date().getFullYear()} Moving Beaumont Forward</strong><span className="hosting-disclosure">Hosting Paid for by LloydWhiteForBeaumont ID #1469630</span><a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noreferrer">@movingbeaumontforward</a></div></footer>
   </div>;
 }
