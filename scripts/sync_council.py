@@ -12,7 +12,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
-HEADER = '''<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong>MOVING BEAUMONT FORWARD</strong><small>Council Briefings</small></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a></nav></div></header>'''
+HEADER = '''<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Council Briefings</small><em>Connecting Today’s Decisions to Tomorrow’s Beaumont.</em></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a></nav></div></header>'''
 FOOTER = '''<footer class="footer"><div class="wrap"><strong>Moving Beaumont Forward</strong><p><a href="/council-briefings.html">Council briefings</a> · <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener">Instagram</a></p></div></footer>'''
 
 def plain(text):
