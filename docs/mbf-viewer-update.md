@@ -41,3 +41,8 @@ The prepared entry point wraps the preserved Worker with this proxy. Its `wrangl
 ## Before publishing
 
 Recheck that production still uses the baseline version above. If it changed, refresh the baseline before preparing another release. Obtain explicit production-deployment approval, then use the targeted configuration, not the repository's regular full-build deployment. After publication, verify the September 15 agenda and the animal-shelter report on the live domain and on an actual phone/tablet. The current task only prepares the update.
+
+## Production deployment
+
+Deployed with explicit user approval on September 14, 2026 (Pacific). Version: 5d7d7ea4-111e-4be1-8182-b0932f14323a. Cloudflare uploaded only the three viewer assets; 86 existing assets were reused. All 82 public-file paths and homepage verified live; retired routes retain 410. September 15 J.1 PDF pages 1 and 2 rendered inside the live agenda, including phone-width verification. The earlier preparation-only status above describes the predeployment checkpoint.
+
