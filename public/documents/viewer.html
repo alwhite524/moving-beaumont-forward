@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/site-nav.js" defer></script>
 
 <meta charset="UTF-8">
 <meta name="viewport"
@@ -9,22 +8,19 @@
 
 <title>Official Document Viewer | Moving Beaumont Forward</title>
 
-<link rel="stylesheet" href="../styles.css?v=20260815j">
+<link rel="stylesheet" href="/styles.css?v=20260904a">
 
-</head>
+<link rel="stylesheet" href="/council-brand.css"><script defer src="/council-window.js"></script></head>
 
 <body data-page="document-viewer">
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="app-header"><div class="wrap header-row">
-  <a aria-label="Moving Beaumont Forward home" class="brand" href="/"><img alt="Moving Beaumont Forward logo" class="brand-logo" src="../mbf-logo.png"><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Official Source Library</small></span></a>
-  <nav aria-label="Primary navigation" class="primary-nav"><a href="/council-briefings">Briefings</a><a href="/pd-technology.html">PD Dossier</a></nav>
-</div></header>
+<header class="app-header"><div class="wrap header-row"><a class="brand" href="/" aria-label="Moving Beaumont Forward home"><img class="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""><span class="brand-copy"><strong><span class="red">MOVING</span> <span class="blue">BEAUMONT</span> <span class="red">FORWARD</span></strong><small>Council Briefings</small><em>Connecting Today’s Decisions to Tomorrow’s Beaumont.</em></span></a><nav class="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/council-briefings.html">Council briefings</a><a href="/council-meeting-sources.html">Videos &amp; agenda packets</a></nav></div></header>
 
-<main class="wrap document-viewer-page" id="main">
+<main class="wrap document-viewer-page" id="main"><a id="viewer-back-link" class="text-link" href="/council-briefings.html">← Back to council briefings</a>
 
 <div class="eyebrow">
-Official Source Library
+Official document
 </div>
 
 <h1 id="document-title">
@@ -36,7 +32,9 @@ Loading document summary...
 </p>
 
 <div class="document-viewer-actions">
+  ← Back to previous page
   <a class="text-link" id="briefing-link" href="#">← Return to Council briefing</a>
+  <a class="text-link" id="source-archive-link" href="/council-meeting-sources.html">View available meeting sources →</a>
 </div>
 
 <section class="inline-pdf-panel" aria-labelledby="pdf-heading" hidden>
@@ -83,9 +81,9 @@ No documents available.
 
 </main>
 
-<script src="document-data.js?v=20260829a"></script>
-<script src="pdf-reader.js?v=20260915-fullscreen"></script>
-<script src="viewer.js?v=20260915-mbf-routing"></script>
+<script src="/documents/document-data.js?v=20260829a"></script>
+<script src="/documents/pdf-reader.js?v=20260915-mobile"></script>
+<script src="/documents/viewer.js?v=20260915-mobile"></script>
 
 </body>
 
