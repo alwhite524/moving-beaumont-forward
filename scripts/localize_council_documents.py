@@ -21,6 +21,7 @@ def council_files() -> list[Path]:
 
 
 def localized(data: bytes) -> bytes:
+    data = data.replace(b"\r\n", b"\n")
     replacements = (
         (
             b"url=https%3A%2F%2Fdocuments.beaumontintelligence.com%2Fofficial-documents%2F",
@@ -60,6 +61,15 @@ def localized(data: bytes) -> bytes:
         b'if (requestedUrl) renderStandalone(requestedUrl);\n  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);\n  else renderDocument(params.get("id") || requestedRecord?.id);',
         data,
     )
+    # Current BI viewer uses a multiline renderDocument call and a host allowlist.
+    data = data.replace(
+        b"  else renderDocument(\n",
+        b"  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);\n  else renderDocument(\n",
+    ) if b"else if (requestedPdf && !requestedRecord)" not in data else data
+    data = data.replace(
+        b'if (parsedUrl.protocol !== "https:" || !trustedHosts.has(parsedUrl.hostname)) {',
+        b'if (!((parsedUrl.origin === window.location.origin && parsedUrl.pathname.startsWith("/council-documents/")) || (parsedUrl.protocol === "https:" && trustedHosts.has(parsedUrl.hostname)))) {',
+    )
     data = re.sub(rb"(?m)^[ \t]+\r?$", b"", data)
     return data
 
@@ -98,6 +108,15 @@ def public_facing(data: bytes, *, remove_header: bool = False, remove_agenda_car
     )
     for old, new in replacements:
         data = data.replace(old, new)
+    # Current BI viewer uses a multiline renderDocument call and a host allowlist.
+    data = data.replace(
+        b"  else renderDocument(\n",
+        b"  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);\n  else renderDocument(\n",
+    ) if b"else if (requestedPdf && !requestedRecord)" not in data else data
+    data = data.replace(
+        b'if (parsedUrl.protocol !== "https:" || !trustedHosts.has(parsedUrl.hostname)) {',
+        b'if (!((parsedUrl.origin === window.location.origin && parsedUrl.pathname.startsWith("/council-documents/")) || (parsedUrl.protocol === "https:" && trustedHosts.has(parsedUrl.hostname)))) {',
+    )
     data = re.sub(rb"(?m)^[ \t]+\r?$", b"", data)
     return data
 

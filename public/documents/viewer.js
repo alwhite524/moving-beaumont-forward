@@ -192,7 +192,8 @@
     const historyRecord = historyPdf
       ? documentLibrary.find((item) => item.pdf.endsWith(`/council-documents/${historyPdf}`))
       : null;
-    renderDocument(historyParams.get("id") || historyRecord?.id);
+    if (historyPdf && !historyRecord) renderStandalone(`/council-documents/${historyPdf}`);
+    else renderDocument(historyParams.get("id") || historyRecord?.id);
   });
 
   const requestedPdf = params.get("pdf");
@@ -202,6 +203,7 @@
     : null;
 
   if (requestedUrl) renderStandalone(requestedUrl);
+  else if (requestedPdf && !requestedRecord) renderStandalone(`/council-documents/${requestedPdf}`);
   else renderDocument(
     params.get("id") || requestedRecord?.id,
     false,
