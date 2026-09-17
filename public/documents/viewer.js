@@ -388,7 +388,7 @@
       history.pushState({}, '', nextUrl);
       renderStandalone(standaloneLink.dataset.standaloneUrl);
       pdfPanel.hidden = false;
-      pdfPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (!pdfPanel.classList.contains('expanded')) pdfPanel.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
 
@@ -398,7 +398,7 @@
     const documentId = link.dataset.documentId;
     const isCurrent = documentId === new URLSearchParams(window.location.search).get("id");
     renderDocument(documentId, !isCurrent, true);
-    pdfPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!pdfPanel.classList.contains('expanded')) pdfPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   attachments.addEventListener("click", handleAttachmentClick);
   pdfAttachments.addEventListener("click", handleAttachmentClick);
