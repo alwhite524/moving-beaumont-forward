@@ -15,3 +15,19 @@
     if(message) message.hidden = !empty;
   });
 })();
+
+// Keep the embedded document flush with the viewport when its reader expands.
+window.addEventListener('message', event => {
+  if (event.origin !== location.origin || !['mbf-pdf-expanded', 'mbf-pdf-title'].includes(event.data?.type)) return;
+  const dialog = document.querySelector('#viewer-dialog');
+  const frame = dialog?.querySelector('iframe');
+  if (!dialog?.open || event.source !== frame?.contentWindow) return;
+  if (event.data.type === 'mbf-pdf-expanded') dialog.classList.toggle('pdf-dialog-expanded', event.data.expanded === true);
+  else if (typeof event.data.title === 'string') {
+    const title = dialog.querySelector('#viewer-title');
+    if (title) title.textContent = event.data.title;
+  }
+});
+document.querySelector('#viewer-dialog')?.addEventListener('close', event => {
+  event.currentTarget.classList.remove('pdf-dialog-expanded');
+});
