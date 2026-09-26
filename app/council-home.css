@@ -2,7 +2,14 @@
 .campaign-home{min-height:100vh;display:flex;flex-direction:column}
 .campaign-home .header-row{justify-content:center}
 .campaign-home .brand{cursor:default}
-.campaign-landing{flex:1;min-height:55vh;padding-top:clamp(56px,8vw,96px);padding-bottom:72px;text-align:center}
+.campaign-mountains{height:clamp(220px,28vw,360px);overflow:hidden;background:#31577d}
+.campaign-mountains img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 47%}
+.campaign-landing{flex:1;min-height:55vh;padding-top:clamp(36px,5vw,56px);padding-bottom:56px;text-align:center}
+.campaign-social{margin:36px auto 0;color:var(--navy)}
+.campaign-social p{margin:0 0 12px;font-weight:700}
+.campaign-social-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.campaign-social-links a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:10px 22px;border:1px solid var(--navy);border-radius:8px;font-weight:700;text-decoration:none}
+.campaign-social-links a:hover,.campaign-social-links a:focus-visible{background:var(--navy);color:#fff}
 .campaign-landing h1{color:var(--navy);font-family:Arial,Helvetica,sans-serif;font-size:clamp(2rem,5vw,3.75rem);line-height:1.15;margin:0 auto;max-width:900px}
 .campaign-intro{color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;margin:20px auto 38px;max-width:720px}
 .candidate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 auto;max-width:940px;text-align:left}

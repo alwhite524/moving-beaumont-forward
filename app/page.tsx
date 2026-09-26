@@ -8,6 +8,7 @@ const CAMPAIGN_MODE = true;
 function CampaignHome() {
   return <div className="mbf-home campaign-home">
     <header className="app-header"><div className="wrap header-row"><div className="brand" aria-label="Moving Beaumont Forward"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""/><span className="brand-copy"><strong><span className="red">MOVING</span> <span className="blue">BEAUMONT</span> <span className="red">FORWARD</span></strong><em>Connecting Today&apos;s Decisions to Tomorrow&apos;s Beaumont.</em></span></div></div></header>
+    <div className="campaign-mountains"><img src="/beaumont-mountains.png" alt="Snow-capped mountains overlooking Beaumont" fetchPriority="high"/></div>
     <main className="campaign-landing wrap" aria-label="Campaign information">
       <h1>Welcome to MovingBeaumontForward.com</h1>
       <p className="campaign-intro">Support Jessica Voigt and Lloyd White for Beaumont City Council.</p>
@@ -31,6 +32,12 @@ function CampaignHome() {
           <a className="candidate-site-link" href="https://LloydWhiteForBeaumont.com/">Visit Lloyd&apos;s campaign website →</a>
         </section>
       </div>
+      <nav className="campaign-social" aria-label="Moving Beaumont Forward social media">
+        <p>Follow Moving Beaumont Forward</p>
+        <div className="campaign-social-links">
+          <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
     </main>
     <footer className="footer"><div className="wrap mbf-footer"><strong>© {new Date().getFullYear()} Moving Beaumont Forward</strong><span className="hosting-disclosure">Hosting Paid for by LloydWhiteForBeaumont ID #1469630</span></div></footer>
   </div>;
