@@ -10,8 +10,7 @@ function CampaignHome() {
     <header className="app-header"><div className="wrap header-row"><div className="brand" aria-label="Moving Beaumont Forward"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""/><span className="brand-copy"><strong><span className="red">MOVING</span> <span className="blue">BEAUMONT</span> <span className="red">FORWARD</span></strong><em>Connecting Today&apos;s Decisions to Tomorrow&apos;s Beaumont.</em></span></div></div></header>
     <div className="campaign-mountains"><img src="/beaumont-mountains.png" alt="Snow-capped mountains overlooking Beaumont" fetchPriority="high"/></div>
     <main className="campaign-landing wrap" aria-label="Campaign information">
-      <h1>Welcome to MovingBeaumontForward.com</h1>
-      <p className="campaign-intro">Support Jessica Voigt and Lloyd White for Beaumont City Council.</p>
+      <h1 className="campaign-intro">Support Jessica Voigt and Lloyd White for Beaumont City Council.</h1>
       <div className="candidate-grid">
         <section className="candidate-card" aria-labelledby="jessica-heading">
           <p className="candidate-label">Beaumont City Council</p>

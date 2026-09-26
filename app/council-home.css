@@ -1,5 +1,6 @@
 /* Homepage uses the same foundation and council-feature layout as BI. */
-.campaign-home{min-height:100vh;display:flex;flex-direction:column}
+.campaign-home{min-height:100vh;display:flex;flex-direction:column;min-width:0}
+.campaign-home .wrap{width:min(1600px,92%);min-width:0}
 .campaign-home .header-row{justify-content:center}
 .campaign-home .brand{cursor:default}
 .campaign-mountains{height:clamp(220px,28vw,360px);overflow:hidden;background:#31577d}
@@ -12,9 +13,8 @@
 .campaign-social-links svg{display:block;width:48px;height:48px}
 .campaign-social-links a:hover{opacity:.85}
 .campaign-social-links a:focus-visible{outline:3px solid var(--navy);outline-offset:5px}
-.campaign-landing h1{color:var(--navy);font-family:Arial,Helvetica,sans-serif;font-size:clamp(2rem,5vw,3.75rem);line-height:1.15;margin:0 auto;max-width:900px}
-.campaign-intro{color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;margin:20px auto 38px;max-width:720px}
-.candidate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 auto;max-width:940px;text-align:left}
+.campaign-intro{color:var(--navy);font-size:clamp(1.25rem,2vw,1.75rem);font-weight:600;line-height:1.5;margin:0 auto 32px;max-width:100%;overflow-wrap:break-word}
+.candidate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin:0 auto;width:100%;text-align:left}
 .candidate-card{background:#fff;border:1px solid #d8dee8;border-radius:16px;box-shadow:0 12px 30px #0b23401a;padding:clamp(24px,4vw,38px)}
 .candidate-label{color:var(--red);font-size:.8rem;font-weight:800;letter-spacing:.1em;margin:0 0 8px;text-transform:uppercase}
 .candidate-card h2{color:var(--navy);font-size:clamp(1.75rem,3vw,2.25rem);line-height:1.2;margin:0 0 24px}
@@ -24,7 +24,7 @@
 .campaign-action.secondary{background:#fff;color:var(--navy)}
 .campaign-action.secondary:hover,.campaign-action.secondary:focus-visible{background:#f2f5f9;color:var(--navy)}
 .candidate-site-link{color:var(--navy);display:inline-block;font-size:.92rem;font-weight:700;margin-top:22px;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:700px){.candidate-grid{grid-template-columns:1fr}.campaign-landing{padding-bottom:48px}}
+@media(max-width:700px){.campaign-home .wrap{width:calc(100% - 40px)}.campaign-home .header-row{align-items:center}.campaign-home .brand{min-width:0;max-width:100%}.campaign-home .brand-copy{min-width:0}.campaign-home .brand-copy strong{white-space:normal;overflow-wrap:break-word}.campaign-home .brand-copy em{overflow-wrap:break-word}.campaign-mountains{width:calc(100% - 40px);margin:0 auto;height:220px;border-radius:10px}.candidate-grid{grid-template-columns:1fr;gap:20px}.candidate-card{min-width:0;padding:24px}.campaign-action,.candidate-site-link{overflow-wrap:break-word}.campaign-landing{padding-top:28px;padding-bottom:40px}.campaign-home .mbf-footer{overflow-wrap:break-word}}
 .mbf-home .hero{min-height:360px}
 .mbf-home .hero-content{padding:70px 0 52px}
 .mbf-home .hero h1{font-size:clamp(2rem,4vw,3rem);font-family:Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2}
