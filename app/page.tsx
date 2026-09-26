@@ -36,6 +36,7 @@ function CampaignHome() {
         <p>Follow Moving Beaumont Forward</p>
         <div className="campaign-social-links">
           <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          <a href="https://www.facebook.com/profile.php?id=61591718821028" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </main>
