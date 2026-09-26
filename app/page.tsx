@@ -35,8 +35,12 @@ function CampaignHome() {
       <nav className="campaign-social" aria-label="Moving Beaumont Forward social media">
         <p>Follow Moving Beaumont Forward</p>
         <div className="campaign-social-links">
-          <a href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-          <a href="https://www.facebook.com/profile.php?id=61591718821028" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+          <a className="social-instagram" href="https://www.instagram.com/movingbeaumontforward/" target="_blank" rel="noopener noreferrer" aria-label="Moving Beaumont Forward on Instagram" title="Instagram">
+            <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><radialGradient id="instagram-gradient" cx="30%" cy="100%" r="110%"><stop offset="0" stopColor="#ffdc80"/><stop offset=".35" stopColor="#fcaf45"/><stop offset=".6" stopColor="#e1306c"/><stop offset=".85" stopColor="#c13584"/><stop offset="1" stopColor="#5851db"/></radialGradient></defs><rect width="48" height="48" rx="12" fill="url(#instagram-gradient)"/><rect x="10" y="10" width="28" height="28" rx="8" fill="none" stroke="#fff" strokeWidth="3"/><circle cx="24" cy="24" r="7" fill="none" stroke="#fff" strokeWidth="3"/><circle cx="33" cy="15" r="2" fill="#fff"/></svg>
+          </a>
+          <a className="social-facebook" href="https://www.facebook.com/profile.php?id=61591718821028" target="_blank" rel="noopener noreferrer" aria-label="Moving Beaumont Forward on Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="12" fill="#0866ff"/><path fill="#fff" d="M16.671 15.469l.532-3.469h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922S15.971 4.688 14.658 4.688c-2.741 0-4.533 1.661-4.533 4.668V12H7.078v3.469h3.047v8.387a12.1 12.1 0 003.75 0v-8.387z"/></svg>
+          </a>
         </div>
       </nav>
     </main>
