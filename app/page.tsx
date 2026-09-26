@@ -2,7 +2,43 @@ import records from './council-records.json';
 
 export const dynamic = 'force-dynamic';
 
+// Set this to false after the election to restore the council-briefings homepage.
+const CAMPAIGN_MODE = true;
+
+function CampaignHome() {
+  return <div className="mbf-home campaign-home">
+    <header className="app-header"><div className="wrap header-row"><div className="brand" aria-label="Moving Beaumont Forward"><img className="brand-logo" src="/moving-beaumont-forward-logo.jpg" alt=""/><span className="brand-copy"><strong><span className="red">MOVING</span> <span className="blue">BEAUMONT</span> <span className="red">FORWARD</span></strong><em>Connecting Today&apos;s Decisions to Tomorrow&apos;s Beaumont.</em></span></div></div></header>
+    <main className="campaign-landing wrap" aria-label="Campaign information">
+      <h1>Welcome to MovingBeaumontForward.com</h1>
+      <p className="campaign-intro">Support Jessica Voigt and Lloyd White for Beaumont City Council.</p>
+      <div className="candidate-grid">
+        <section className="candidate-card" aria-labelledby="jessica-heading">
+          <p className="candidate-label">Beaumont City Council</p>
+          <h2 id="jessica-heading">Jessica Voigt</h2>
+          <div className="candidate-actions">
+            <a className="campaign-action" href="https://JessicaVoigtForBeaumont.com/volunteer.html#volunteer-form">Volunteer for Jessica</a>
+            <a className="campaign-action secondary" href="https://JessicaVoigtForBeaumont.com/volunteer.html#yard-sign-form">Request a Jessica yard sign</a>
+          </div>
+          <a className="candidate-site-link" href="https://JessicaVoigtForBeaumont.com/">Visit Jessica&apos;s campaign website →</a>
+        </section>
+        <section className="candidate-card" aria-labelledby="lloyd-heading">
+          <p className="candidate-label">Beaumont City Council</p>
+          <h2 id="lloyd-heading">Lloyd White</h2>
+          <div className="candidate-actions">
+            <a className="campaign-action" href="https://LloydWhiteForBeaumont.com/volunteer.html#volunteer-form">Volunteer for Lloyd</a>
+            <a className="campaign-action secondary" href="https://LloydWhiteForBeaumont.com/volunteer.html#yard-signs">Request a Lloyd yard sign</a>
+          </div>
+          <a className="candidate-site-link" href="https://LloydWhiteForBeaumont.com/">Visit Lloyd&apos;s campaign website →</a>
+        </section>
+      </div>
+    </main>
+    <footer className="footer"><div className="wrap mbf-footer"><strong>© {new Date().getFullYear()} Moving Beaumont Forward</strong><span className="hosting-disclosure">Hosting Paid for by LloydWhiteForBeaumont ID #1469630</span></div></footer>
+  </div>;
+}
+
 export default function Home() {
+  if (CAMPAIGN_MODE) return <CampaignHome />;
+
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year:'numeric',month:'2-digit',day:'2-digit' }).format(new Date());
   const upcoming = records.filter(record => record.date >= today).sort((a,b) => a.date.localeCompare(b.date));
   const latest = upcoming[0];

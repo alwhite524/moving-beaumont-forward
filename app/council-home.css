@@ -1,4 +1,21 @@
 /* Homepage uses the same foundation and council-feature layout as BI. */
+.campaign-home{min-height:100vh;display:flex;flex-direction:column}
+.campaign-home .header-row{justify-content:center}
+.campaign-home .brand{cursor:default}
+.campaign-landing{flex:1;min-height:55vh;padding-top:clamp(56px,8vw,96px);padding-bottom:72px;text-align:center}
+.campaign-landing h1{color:var(--navy);font-family:Arial,Helvetica,sans-serif;font-size:clamp(2rem,5vw,3.75rem);line-height:1.15;margin:0 auto;max-width:900px}
+.campaign-intro{color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;margin:20px auto 38px;max-width:720px}
+.candidate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 auto;max-width:940px;text-align:left}
+.candidate-card{background:#fff;border:1px solid #d8dee8;border-radius:16px;box-shadow:0 12px 30px #0b23401a;padding:clamp(24px,4vw,38px)}
+.candidate-label{color:var(--red);font-size:.8rem;font-weight:800;letter-spacing:.1em;margin:0 0 8px;text-transform:uppercase}
+.candidate-card h2{color:var(--navy);font-size:clamp(1.75rem,3vw,2.25rem);line-height:1.2;margin:0 0 24px}
+.candidate-actions{display:grid;gap:12px}
+.campaign-action{background:var(--navy);border:2px solid var(--navy);border-radius:8px;color:#fff;display:block;font-weight:800;padding:14px 18px;text-align:center;text-decoration:none}
+.campaign-action:hover,.campaign-action:focus-visible{background:#173d69;border-color:#173d69}
+.campaign-action.secondary{background:#fff;color:var(--navy)}
+.campaign-action.secondary:hover,.campaign-action.secondary:focus-visible{background:#f2f5f9;color:var(--navy)}
+.candidate-site-link{color:var(--navy);display:inline-block;font-size:.92rem;font-weight:700;margin-top:22px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.candidate-grid{grid-template-columns:1fr}.campaign-landing{padding-bottom:48px}}
 .mbf-home .hero{min-height:360px}
 .mbf-home .hero-content{padding:70px 0 52px}
 .mbf-home .hero h1{font-size:clamp(2rem,4vw,3rem);font-family:Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2}
